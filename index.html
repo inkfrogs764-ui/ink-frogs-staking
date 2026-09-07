@@ -1,0 +1,901 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <script>
+    if (location.protocol === 'file:') {
+      location.replace(`http://localhost:4173/staking.html${location.search}${location.hash}`);
+    }
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Frog Vault | Ink Frogs Lab</title>
+  <meta name="description" content="Stake your Ink Frogs, track Vault rewards, and join the Ink Frogs Lab community on Ink." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #050314;
+      --panel: rgba(10, 7, 29, .88);
+      --panel-2: rgba(18, 10, 45, .82);
+      --line: rgba(145, 91, 255, .36);
+      --violet: #9c4dff;
+      --cyan: #00f5d4;
+      --gold: #ffd43b;
+      --green: #71ff77;
+      --muted: #aaa6c2;
+      --white: #f7f5ff;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--white);
+      background:
+        linear-gradient(180deg, rgba(5,3,20,.36), var(--ink) 78%),
+        url('assets/reveal_assembly_base.png') center top / cover fixed,
+        var(--ink);
+      font-family: 'VT323', monospace;
+      font-size: 20px;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: .15;
+      background: repeating-linear-gradient(0deg, transparent 0 3px, rgba(0,0,0,.3) 4px);
+      z-index: 10;
+    }
+    button, a { font: inherit; }
+    button { cursor: pointer; }
+    .shell { width: min(1580px, calc(100% - 48px)); margin: 0 auto; position: relative; z-index: 2; }
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(5, 3, 20, .88);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(18px);
+    }
+    .nav { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: flex; align-items: center; gap: 12px; color: var(--white); text-decoration: none; }
+    .brand img { width: 44px; height: 44px; image-rendering: pixelated; border-radius: 8px; }
+    .brand strong { font-family: 'Press Start 2P', monospace; font-size: 12px; line-height: 1.5; }
+    .navlinks { display: flex; align-items: center; gap: 24px; }
+    .navlinks a { color: var(--muted); text-decoration: none; font-size: 18px; }
+    .navlinks a:hover { color: var(--cyan); }
+    .navlinks .market-link { display: inline-flex; align-items: center; min-height: 40px; padding: 9px 14px; color: #1b1200; background: var(--gold); border: 1px solid #fff09a; border-radius: 6px; font-family: 'Press Start 2P', monospace; font-size: 8px; box-shadow: inset 0 -3px 0 rgba(0,0,0,.2), 0 0 20px rgba(255,212,59,.2); }
+    .navlinks .market-link:hover { color: #1b1200; transform: translateY(-1px); }
+    .pixel-btn {
+      position: relative;
+      border: 1px solid var(--cyan);
+      border-radius: 8px;
+      padding: 13px 18px;
+      color: #021b18;
+      background: var(--cyan);
+      font-family: 'Press Start 2P', monospace;
+      font-size: 10px;
+      line-height: 1.3;
+      box-shadow: 0 0 26px rgba(0,245,212,.22), inset 0 -4px 0 rgba(0,0,0,.18);
+      transition: transform .16s ease, box-shadow .16s ease;
+    }
+    .pixel-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 34px rgba(0,245,212,.3), inset 0 -4px 0 rgba(0,0,0,.18); }
+    .pixel-btn:disabled { cursor: not-allowed; filter: grayscale(.6); opacity: .45; transform: none; box-shadow: none; }
+    .pixel-btn.alt { color: var(--white); background: rgba(156,77,255,.14); border-color: var(--violet); }
+    main { padding: 58px 0 90px; }
+    .hero { display: grid; grid-template-columns: minmax(0, .9fr) minmax(620px, 1.1fr); align-items: center; gap: 64px; min-height: 500px; }
+    .eyebrow { color: var(--cyan); letter-spacing: .14em; font-family: 'Press Start 2P', monospace; font-size: 10px; }
+    h1 { margin: 20px 0 18px; font-family: 'Press Start 2P', monospace; font-size: clamp(34px, 6vw, 72px); line-height: 1.12; text-shadow: 5px 5px 0 #3a0d72, 0 0 28px rgba(156,77,255,.5); }
+    h1 span { color: var(--gold); }
+    .lead { max-width: 650px; margin: 0; color: #d7d3e8; font-size: clamp(22px, 2.5vw, 30px); line-height: 1.35; }
+    .live-pill { display: inline-flex; align-items: center; gap: 9px; margin-top: 24px; color: var(--gold); font-size: 18px; }
+    .live-pill i { width: 9px; height: 9px; background: var(--gold); box-shadow: 0 0 16px var(--gold); animation: blink 1.2s steps(2) infinite; }
+    @keyframes blink { 50% { opacity: .25; } }
+    .panel {
+      background: linear-gradient(145deg, var(--panel-2), var(--panel));
+      border: 1px solid var(--line);
+      box-shadow: 0 24px 90px rgba(0,0,0,.46), inset 0 1px 0 rgba(255,255,255,.04);
+      clip-path: polygon(0 14px, 14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%);
+    }
+    .vault { padding: 32px; }
+    .panel-head { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+    .panel-head h2 { margin: 0; font-family: 'Press Start 2P', monospace; font-size: 14px; color: var(--cyan); }
+    .network { color: var(--green); font-size: 17px; }
+    .wallet { margin: 26px 0; min-height: 78px; display: flex; justify-content: space-between; align-items: center; gap: 22px; padding: 18px 20px; border: 1px dashed rgba(0,245,212,.3); background: rgba(0,0,0,.2); }
+    .wallet small { display: block; color: var(--muted); font-size: 16px; }
+    .wallet strong { color: var(--white); font-size: 21px; }
+    .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .stat { min-height: 92px; padding: 18px 16px; background: rgba(2,1,12,.55); border: 1px solid rgba(156,77,255,.24); }
+    .stat span { display: block; color: var(--muted); font-size: 15px; }
+    .stat strong { display: block; margin-top: 8px; font-family: 'Press Start 2P', monospace; font-size: 17px; color: var(--gold); }
+    .actions { display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 20px; }
+    .stake-controls { margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--line); }
+    .stake-controls label { display: block; margin-bottom: 8px; color: var(--muted); font-size: 16px; }
+    .token-input { width: 100%; min-height: 48px; padding: 12px 14px; color: var(--white); background: rgba(0,0,0,.35); border: 1px solid rgba(0,245,212,.38); border-radius: 6px; font-family: 'VT323', monospace; font-size: 21px; outline: none; }
+    .token-input:focus { border-color: var(--cyan); box-shadow: 0 0 0 3px rgba(0,245,212,.1); }
+    .selection-box { min-height: 54px; padding: 14px 16px; color: var(--cyan); background: rgba(0,0,0,.35); border: 1px dashed rgba(0,245,212,.38); border-radius: 6px; }
+    .tx-actions { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+    .notice { margin: 18px 0 0; color: var(--muted); font-size: 18px; line-height: 1.45; }
+    .notice b { color: var(--cyan); }
+    .section { margin-top: 42px; }
+    .section-title { display: flex; justify-content: space-between; align-items: end; gap: 18px; margin-bottom: 18px; }
+    .section-title h2 { margin: 0; font-family: 'Press Start 2P', monospace; font-size: clamp(16px, 2.8vw, 25px); }
+    .section-title p { max-width: 720px; margin: 0; color: var(--muted); font-size: 20px; line-height: 1.35; text-align: right; }
+    .frog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 20px; }
+    .frog-card { overflow: hidden; background: rgba(8,4,24,.92); border: 1px solid var(--line); }
+    .frog-card img { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; image-rendering: pixelated; background: #0c0520; }
+    .frog-info { min-height: 126px; padding: 16px 18px 18px; border-top: 1px solid rgba(156,77,255,.28); }
+    .frog-status-row { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 14px; }
+    .frog-status-row strong { color: var(--white); font-family: 'Press Start 2P', monospace; font-size: 9px; }
+    .frog-state { display: inline-flex; align-items: center; min-height: 26px; padding: 5px 9px; color: var(--cyan); background: rgba(0,245,212,.09); border: 1px solid rgba(0,245,212,.45); border-radius: 4px; font-family: 'Press Start 2P', monospace; font-size: 7px; line-height: 1.2; }
+    .frog-table { width: 100%; table-layout: fixed; border-collapse: collapse; background: rgba(0,0,0,.22); border: 1px solid rgba(156,77,255,.25); }
+    .frog-table th, .frog-table td { width: 33.333%; padding: 8px 9px; text-align: left; border-right: 1px solid rgba(156,77,255,.2); }
+    .frog-table th:last-child, .frog-table td:last-child { border-right: 0; }
+    .frog-table th { padding-bottom: 3px; color: var(--muted); font-size: 13px; font-weight: 400; line-height: 1; }
+    .frog-table td { padding-top: 4px; color: var(--white); font-size: 18px; line-height: 1.1; }
+    .frog-table td:nth-child(2) { color: var(--violet); }
+    .frog-table td:last-child { color: var(--gold); }
+    .rate-note { margin-top: 9px; color: var(--muted); font-size: 13px; line-height: 1.15; text-align: right; }
+    .rate-note.live { color: var(--green); }
+    .frog-card { cursor: pointer; transition: transform .16s ease, border-color .16s ease; }
+    .frog-card:hover { transform: translateY(-3px); border-color: var(--cyan); }
+    .frog-card.staked { border-color: var(--gold); box-shadow: 0 0 24px rgba(255,212,59,.16); }
+    .frog-card.staked .frog-state { color: var(--gold); background: rgba(255,212,59,.08); border-color: rgba(255,212,59,.5); }
+    .frog-card.empty { grid-column: 1 / -1; cursor: default; padding: 28px; color: var(--muted); text-align: center; }
+    .frog-card.empty:hover { transform: none; border-color: var(--line); }
+    .selected { outline: 2px solid var(--cyan); box-shadow: 0 0 22px rgba(0,245,212,.22); }
+    .utility-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .utility { padding: 26px; min-height: 190px; }
+    .utility b { display: block; color: var(--cyan); font-family: 'Press Start 2P', monospace; font-size: 11px; margin-bottom: 15px; }
+    .utility p { margin: 0; color: #d1cde0; font-size: 21px; line-height: 1.4; }
+    .utility small { display: block; margin-top: 17px; color: var(--gold); font-size: 17px; line-height: 1.35; }
+    .community { display: grid; grid-template-columns: minmax(260px, .75fr) minmax(520px, 1.25fr); align-items: center; gap: 42px; padding: 32px; }
+    .community h2 { margin: 10px 0 12px; color: var(--white); font-family: 'Press Start 2P', monospace; font-size: clamp(18px, 2.4vw, 30px); line-height: 1.3; }
+    .community h2 span { color: var(--gold); }
+    .community p { max-width: 650px; margin: 0; color: #d1cde0; font-size: 21px; line-height: 1.4; }
+    .community-links { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .community-links a { display: flex; align-items: center; justify-content: center; min-height: 54px; padding: 13px 16px; color: var(--white); background: rgba(156,77,255,.12); border: 1px solid var(--violet); border-radius: 7px; text-decoration: none; text-align: center; font-family: 'Press Start 2P', monospace; font-size: 9px; line-height: 1.35; transition: transform .16s ease, border-color .16s ease, background .16s ease; }
+    .community-links a:hover { transform: translateY(-2px); border-color: var(--cyan); background: rgba(0,245,212,.1); }
+    .community-links .buy-link { color: #1b1200; background: var(--gold); border-color: #fff09a; }
+    .community-links .buy-link:hover { color: #1b1200; background: #ffe36e; border-color: #fff; }
+    .footer { padding: 30px 0 45px; border-top: 1px solid var(--line); color: var(--muted); text-align: center; font-size: 17px; }
+    .toast { position: fixed; right: 22px; bottom: 22px; z-index: 50; max-width: 390px; padding: 16px 18px; color: var(--white); background: #0c0822; border: 1px solid var(--cyan); box-shadow: 0 14px 60px rgba(0,0,0,.55); opacity: 0; transform: translateY(20px); pointer-events: none; transition: .2s ease; }
+    .toast.show { opacity: 1; transform: translateY(0); }
+    @media (max-width: 1100px) {
+      .hero { grid-template-columns: 1fr; min-height: 0; }
+      .community { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 850px) {
+      .navlinks a { display: none; }
+      .navlinks .market-link { display: inline-flex; }
+      main { padding-top: 45px; }
+      .frog-grid, .utility-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 560px) {
+      .shell { width: min(100% - 20px, 1580px); }
+      .brand strong { font-size: 9px; }
+      .pixel-btn { padding: 11px 12px; font-size: 8px; }
+      h1 { font-size: 38px; }
+      .vault { padding: 18px; }
+      .stats, .frog-grid, .utility-grid { grid-template-columns: 1fr; }
+      .actions { grid-template-columns: 1fr; }
+      .tx-actions { grid-template-columns: 1fr; }
+      .section-title { display: block; }
+      .section-title p { margin-top: 10px; text-align: left; }
+      .community { padding: 22px; }
+      .community-links { grid-template-columns: 1fr; }
+      .brand strong { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <nav class="shell nav" aria-label="Main navigation">
+      <a class="brand" href="/">
+        <img src="collection/brand-assets/logo.png" alt="Ink Frogs Lab logo" />
+        <strong>INK FROGS LAB</strong>
+      </a>
+      <div class="navlinks">
+        <a href="#vault">Vault</a>
+        <a href="#frogs">My Frogs</a>
+        <a href="#utility">Utility</a>
+        <a class="market-link" href="https://opensea.io/collection/inkfrogslab" target="_blank" rel="noopener noreferrer">BUY A FROG</a>
+        <button class="pixel-btn" id="connectTop">CONNECT WALLET</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="shell">
+    <section class="hero" id="vault">
+      <div>
+        <div class="eyebrow">FROG PASSPORT // HOLDER SYSTEM</div>
+        <h1>ENTER THE <span>FROG VAULT</span></h1>
+        <p class="lead">Connect your wallet, verify your Ink Frogs, and prepare them for the next phase of holder utility.</p>
+        <div class="live-pill" id="vaultLive"><i></i> Connect wallet to load the Vault</div>
+      </div>
+
+      <article class="panel vault" aria-label="Staking dashboard">
+        <div class="panel-head">
+          <h2>VAULT STATUS</h2>
+          <span class="network">● INK MAINNET</span>
+        </div>
+        <div class="wallet">
+          <div>
+            <small>CONNECTED WALLET</small>
+            <strong id="walletLabel">Not connected</strong>
+          </div>
+          <button class="pixel-btn alt" id="connectMain">CONNECT</button>
+        </div>
+        <div class="stats">
+          <div class="stat"><span>OWNED</span><strong id="ownedCount">—</strong></div>
+          <div class="stat"><span>STAKED</span><strong id="stakedCount">—</strong></div>
+          <div class="stat"><span>$FROGS</span><strong id="xpCount">—</strong></div>
+        </div>
+        <div class="actions">
+          <button class="pixel-btn alt" id="approveBtn" disabled>NO APPROVAL NEEDED</button>
+        </div>
+        <div class="stake-controls">
+          <label>SELECTED FROGS — click a Frog card below</label>
+          <div class="selection-box" id="selectionSummary">Connect wallet to load your Frogs automatically.</div>
+          <input id="tokenIds" type="hidden" />
+          <div class="tx-actions">
+            <button class="pixel-btn" id="stakeBtn" disabled>STAKE</button>
+            <button class="pixel-btn alt" id="claimBtn" disabled>CLAIM $FROGS</button>
+            <button class="pixel-btn alt" id="unstakeBtn" disabled>UNSTAKE</button>
+          </div>
+        </div>
+        <p class="notice" id="contractNotice"><b>Connect your wallet.</b> Your Ink Frogs and Vault position will load automatically.</p>
+      </article>
+    </section>
+
+    <section class="section" id="frogs">
+      <div class="section-title">
+        <h2>YOUR FROG SQUAD</h2>
+        <p id="frogSummary">Connect and verify to load your real NFT inventory</p>
+      </div>
+      <div class="frog-grid" id="frogGrid">
+        <article class="frog-card empty">No wallet inventory loaded yet.</article>
+      </div>
+    </section>
+
+    <section class="section" id="utility">
+      <div class="section-title"><h2>THE $FROGS ROADMAP</h2><p>Vault rewards are live now. Token launch, conversion and snapshot details are still to be announced.</p></div>
+      <div class="utility-grid">
+        <article class="panel utility"><b>$FROGS HOLDER AIRDROP · PLANNED</b><p>Planned holder allocation with multiplier bonuses proposed for Rare, Epic and 1/1 Frogs.</p><small>Snapshot date TBA · keep your Frogs safe</small></article>
+        <article class="panel utility"><b>STAKING REWARDS · LIVE</b><p>Stake with zero lock-up and earn $FROGS daily. Longer participation builds a larger balance.</p><small>100–1000 $FROGS daily based on rarity</small></article>
+        <article class="panel utility"><b>$FROGS UTILITY · ROADMAP</b><p>Proposed Collab Vault access, deflationary event burns and DAO voting power.</p><small>Token utility is not live yet</small></article>
+      </div>
+    </section>
+
+    <section class="section panel community" id="community">
+      <div>
+        <div class="eyebrow">INK FROGS LAB // COMMUNITY</div>
+        <h2>GOT YOUR <span>FROG?</span></h2>
+        <p>Pick up an Ink Frog on the secondary market, enter the Vault, and join the community building the next phase together.</p>
+      </div>
+      <div class="community-links" aria-label="Ink Frogs Lab links">
+        <a href="https://inkfrogs.xyz/" target="_blank" rel="noopener noreferrer">WEBSITE</a>
+        <a href="https://x.com/InkFrogsLab" target="_blank" rel="noopener noreferrer">FOLLOW ON X</a>
+        <a href="https://discord.gg/A25Qx9Srvb" target="_blank" rel="noopener noreferrer">JOIN DISCORD</a>
+        <a class="buy-link" href="https://opensea.io/collection/inkfrogslab" target="_blank" rel="noopener noreferrer">BUY ON OPENSEA</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="shell">INK FROGS LAB · BUILT ON INK · NEVER SHARE YOUR SEED PHRASE</div></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    // Capture injected wallets before AppKit initializes. Some extensions only
+    // announce once during startup, so a listener created afterwards misses them.
+    window.__inkInjectedProviders = [];
+    window.addEventListener('eip6963:announceProvider', event => {
+      const provider = event.detail?.provider;
+      if (provider?.request && !window.__inkInjectedProviders.includes(provider)) {
+        window.__inkInjectedProviders.push(provider);
+      }
+    });
+    if (window.ethereum?.request) window.__inkInjectedProviders.push(window.ethereum);
+    window.dispatchEvent(new Event('eip6963:requestProvider'));
+  </script>
+  <script src="wallet-appkit.bundle.js?v=20260907-injected-fix"></script>
+  <script>
+    const INK_CHAIN_ID = '0xdef1';
+    const INK_RPC_URL = 'https://rpc-gel.inkonchain.com';
+    const NFT_CONTRACT = '0x44d10e52ae10762161eb867215d39fc72b70f21a';
+    // The local admin deployer stores the reviewed vault address here.
+    const DEFAULT_STAKING_CONTRACT = '0x65037AeA019AEcB7EbC27999dE161149c2970Af7';
+    const STAKING_CONTRACT = localStorage.getItem('inkFrogsStakingAddress') || DEFAULT_STAKING_CONTRACT;
+    const connectButtons = [document.getElementById('connectTop'), document.getElementById('connectMain')];
+    const walletLabel = document.getElementById('walletLabel');
+    const ownedCount = document.getElementById('ownedCount');
+    const stakedCount = document.getElementById('stakedCount');
+    const xpCount = document.getElementById('xpCount');
+    const approveBtn = document.getElementById('approveBtn');
+    const stakeBtn = document.getElementById('stakeBtn');
+    const claimBtn = document.getElementById('claimBtn');
+    const unstakeBtn = document.getElementById('unstakeBtn');
+    const tokenIdsInput = document.getElementById('tokenIds');
+    const contractNotice = document.getElementById('contractNotice');
+    const frogGrid = document.getElementById('frogGrid');
+    const frogSummary = document.getElementById('frogSummary');
+    const vaultLive = document.getElementById('vaultLive');
+    const selectionSummary = document.getElementById('selectionSummary');
+    const toast = document.getElementById('toast');
+    let dashboardAccount = '';
+    let walletProvider = null;
+    let connectionInProgress = false;
+    const announcedProviders = [...(window.__inkInjectedProviders || [])];
+    let ownedTokenIds = [];
+    let stakedTokenIds = [];
+    const selectedTokenIds = new Set();
+    let rpcRequestId = 1;
+    let frogsCounterModel = {stored:0, positions:[]};
+    let raritySnapshot = new Map();
+    let rarityVaultActive = false;
+    let manualDisconnect = false;
+
+    function notify(message) {
+      toast.textContent = message;
+      toast.classList.add('show');
+      window.clearTimeout(notify.timer);
+      notify.timer = window.setTimeout(() => toast.classList.remove('show'), 3600);
+    }
+
+    function short(address) { return `${address.slice(0, 6)}…${address.slice(-4)}`; }
+
+    function setConnectionButtons(connected) {
+      document.getElementById('connectTop').textContent = connected ? 'DISCONNECT WALLET' : 'CONNECT WALLET';
+      document.getElementById('connectMain').textContent = connected ? 'CONNECTED' : 'CONNECT';
+      document.getElementById('connectTop').setAttribute('aria-pressed', connected ? 'true' : 'false');
+      document.getElementById('connectMain').setAttribute('aria-disabled', connected ? 'true' : 'false');
+    }
+
+    function resetWalletDashboard() {
+      dashboardAccount = '';
+      walletProvider = null;
+      ownedTokenIds = [];
+      stakedTokenIds = [];
+      selectedTokenIds.clear();
+      frogsCounterModel = {stored:0, positions:[]};
+      rarityVaultActive = false;
+      walletLabel.textContent = 'Not connected';
+      ownedCount.textContent = '—';
+      stakedCount.textContent = '—';
+      xpCount.textContent = '—';
+      selectionSummary.textContent = 'Connect wallet to load your Frogs automatically.';
+      tokenIdsInput.value = '';
+      frogSummary.textContent = 'Connect and verify to load your real NFT inventory';
+      frogGrid.innerHTML = '<article class="frog-card empty">No wallet inventory loaded yet.</article>';
+      vaultLive.innerHTML = '<i></i> Connect wallet to load the Vault';
+      contractNotice.innerHTML = '<b>Wallet disconnected.</b> Connect your wallet to access the Vault.';
+      setVaultButtons(false);
+      setConnectionButtons(false);
+    }
+
+    function word(value) { return BigInt(value).toString(16).padStart(64, '0'); }
+
+    function addressWord(address) { return address.toLowerCase().replace('0x', '').padStart(64, '0'); }
+
+    window.addEventListener('eip6963:announceProvider', event => {
+      const provider = event.detail?.provider;
+      if (provider && !announcedProviders.includes(provider)) announcedProviders.push(provider);
+    });
+    window.dispatchEvent(new Event('eip6963:requestProvider'));
+
+    const wait = milliseconds => new Promise(resolve => setTimeout(resolve, milliseconds));
+
+    async function findWalletProvider(timeout=1200) {
+      const started = Date.now();
+      do {
+        window.dispatchEvent(new Event('eip6963:requestProvider'));
+        const legacy = window.ethereum?.providers?.length
+          ? window.ethereum.providers
+          : (window.ethereum ? [window.ethereum] : []);
+        const early = window.__inkInjectedProviders || [];
+        const providers = [...announcedProviders, ...early, ...legacy]
+          .filter((provider, index, list) => provider?.request && list.indexOf(provider) === index);
+        const match = providers.find(provider => provider.isRabby)
+          || providers.find(provider => provider.isMetaMask)
+          || providers[0];
+        if (match) return match;
+        await wait(200);
+      } while (Date.now() - started < timeout);
+      return null;
+    }
+
+    async function ensureInk(provider) {
+      const chainId = await provider.request({method:'eth_chainId'});
+      if (chainId.toLowerCase() !== INK_CHAIN_ID) {
+        await provider.request({method:'wallet_switchEthereumChain', params:[{chainId:INK_CHAIN_ID}]});
+      }
+    }
+
+    function selectedIdsFor(action) {
+      const source = action === 'stake' ? ownedTokenIds : stakedTokenIds;
+      let ids = source.filter(id => selectedTokenIds.has(id.toString()));
+      if (!ids.length && source.length === 1) ids = [...source];
+      if (!ids.length && action === 'claim') ids = [...source];
+      if (!ids.length) throw new Error(`Select a Frog card to ${action}.`);
+      if (ids.length > 50) throw new Error('Maximum 50 Frogs per transaction.');
+      return ids;
+    }
+
+    function syncSelection() {
+      const ids = [...selectedTokenIds];
+      tokenIdsInput.value = ids.join(',');
+      selectionSummary.textContent = ids.length
+        ? `Selected: ${ids.map(id => `#${id}`).join(', ')}`
+        : 'Click one or more Frog cards below to select them.';
+      frogGrid.querySelectorAll('[data-token-id]').forEach(card => {
+        card.classList.toggle('selected', selectedTokenIds.has(card.dataset.tokenId));
+      });
+    }
+
+    function encodeUintArray(selector, ids) {
+      return `${selector}${word(32)}${word(ids.length)}${ids.map(word).join('')}`;
+    }
+
+    function decodeUintArray(result) {
+      if (!result || result === '0x') return [];
+      const clean = result.slice(2);
+      const offset = Number(BigInt(`0x${clean.slice(0, 64)}`)) * 2;
+      const length = Number(BigInt(`0x${clean.slice(offset, offset + 64)}`));
+      return Array.from({length}, (_, index) =>
+        BigInt(`0x${clean.slice(offset + 64 + index * 64, offset + 128 + index * 64)}`)
+      );
+    }
+
+    function renderFrogsCounter() {
+      const now = Date.now() / 1000;
+      const live = frogsCounterModel.positions.reduce((total, position) => {
+        const earned = Math.max(0, (now - position.stakedAt) * position.rate / 86400 - position.claimed);
+        return total + earned;
+      }, frogsCounterModel.stored);
+      xpCount.textContent = live.toFixed(4);
+    }
+
+    async function configureFrogsCounter(address, stakedIds, fallbackXP) {
+      try {
+        const storedRaw = await ethCall(STAKING_CONTRACT, `0xc6b9e870${addressWord(address)}`);
+        const positionResults = await Promise.all(stakedIds.map(async id => {
+          const [position, rate] = await Promise.all([
+            ethCall(STAKING_CONTRACT, `0x99fbab88${word(id)}`),
+            rarityVaultActive
+              ? ethCall(STAKING_CONTRACT, `0xa4f7622e${word(id)}`)
+              : Promise.resolve(`0x${word(100)}`)
+          ]);
+          return {position, rate:Number(BigInt(rate))};
+        }));
+        frogsCounterModel = {
+          stored: Number(BigInt(storedRaw)),
+          positions: positionResults.map(result => {
+            const clean = result.position.slice(2);
+            return {
+              stakedAt: Number(BigInt(`0x${clean.slice(64, 128)}`)),
+              claimed: Number(BigInt(`0x${clean.slice(128, 192)}`)),
+              rate: result.rate
+            };
+          })
+        };
+      } catch {
+        frogsCounterModel = {stored:Number(fallbackXP), positions:[]};
+      }
+      renderFrogsCounter();
+    }
+
+    function explainError(error) {
+      const data = error?.data?.data || error?.data || '';
+      const message = `${error?.message || ''} ${error?.data?.message || ''}`;
+      if (/Not token owner|IncorrectOwner/i.test(message) || String(data).startsWith('0x64283d7b')) {
+        return 'Stake rejected: one of these Token IDs is not owned by the connected wallet.';
+      }
+      if (/InsufficientApproval/i.test(message) || String(data).startsWith('0x177e802f')) {
+        return 'Stake rejected: approve the Vault first, wait for confirmation, then retry.';
+      }
+      if (String(data).startsWith('0x1de5204e')) {
+        return 'The collection transfer policy blocked this Vault. Deploy the SeaDrop-compatible Vault.';
+      }
+      if (/Already staked/i.test(message)) return 'This Frog is already staked.';
+      if (/Not stake owner/i.test(message)) return 'This wallet is not the owner of that staked Frog.';
+      if (/No XP available/i.test(message)) return 'No claimable $FROGS yet. The live counter keeps accruing.';
+      return error?.shortMessage || error?.message || 'Transaction simulation failed.';
+    }
+
+    async function inkRpc(method, params=[]) {
+      const response = await fetch(INK_RPC_URL, {
+        method: 'POST',
+        headers: {'content-type':'application/json'},
+        body: JSON.stringify({jsonrpc:'2.0', id:rpcRequestId++, method, params})
+      });
+      if (!response.ok) throw new Error(`Ink RPC unavailable (${response.status}).`);
+      const payload = await response.json();
+      if (payload.error) {
+        const error = new Error(payload.error.message || 'Ink RPC request failed.');
+        error.data = payload.error.data;
+        throw error;
+      }
+      return payload.result;
+    }
+
+    async function readRpc(method, params=[]) {
+      try {
+        return await inkRpc(method, params);
+      } catch (error) {
+        const networkFailure = error instanceof TypeError || /failed to fetch|network|unavailable/i.test(error?.message || '');
+        if (networkFailure && walletProvider) return walletProvider.request({method, params});
+        throw error;
+      }
+    }
+
+    async function ethCall(to, data) {
+      return readRpc('eth_call', [{to, data}, 'latest']);
+    }
+
+    async function sendTransaction(to, data, from) {
+      const tx = {from, to, data};
+      try {
+        await readRpc('eth_call', [tx, 'pending']);
+        // Simulate through the public Ink RPC, then let the wallet estimate fees.
+        const hash = await walletProvider.request({ method: 'eth_sendTransaction', params: [tx] });
+        notify(`Transaction submitted: ${short(hash)}`);
+        for (let attempt = 0; attempt < 90; attempt += 1) {
+          await new Promise(resolve => setTimeout(resolve, 2000));
+          const receipt = await readRpc('eth_getTransactionReceipt', [hash]);
+          if (receipt) {
+            if (receipt.status === '0x0') throw new Error('Transaction reverted. Check the Vault contract and selected Frog.');
+            return receipt;
+          }
+        }
+        throw new Error('Transaction is still pending. Check your wallet or Ink Explorer.');
+      } catch (error) {
+        throw new Error(explainError(error));
+      }
+    }
+
+    async function readBalance(address) {
+      const clean = address.toLowerCase().replace('0x', '').padStart(64, '0');
+      const data = `0x70a08231${clean}`;
+      const result = await ethCall(NFT_CONTRACT, data);
+      return Number(BigInt(result));
+    }
+
+    async function loadOwnedTokenIds(address, expectedBalance) {
+      if (!expectedBalance) return [];
+      const owned = [];
+      let nextPage = {};
+      for (let page = 0; page < 10; page += 1) {
+        const url = new URL(`https://explorer.inkonchain.com/api/v2/addresses/${address}/nft`);
+        url.searchParams.set('type', 'ERC-721');
+        Object.entries(nextPage).forEach(([key, value]) => url.searchParams.set(key, value));
+        const response = await fetch(url);
+        if (!response.ok) throw new Error('Ink Explorer could not load wallet NFTs. Retry in a moment.');
+        const payload = await response.json();
+        payload.items?.forEach(item => {
+          if (item.token?.address_hash?.toLowerCase() === NFT_CONTRACT.toLowerCase()) {
+            owned.push(BigInt(item.id));
+          }
+        });
+        if (owned.length >= expectedBalance || !payload.next_page_params) break;
+        nextPage = payload.next_page_params;
+      }
+      return owned;
+    }
+
+    async function loadRaritySnapshot() {
+      if (raritySnapshot.size) return;
+      const response = await fetch('collection/generated/rarity-500.json');
+      if (!response.ok) throw new Error('Rarity snapshot could not be loaded.');
+      const payload = await response.json();
+      raritySnapshot = new Map(payload.tokens.map(token => [String(token.tokenId), token]));
+    }
+
+    function renderInventory(ownedIds, stakedIds) {
+      ownedTokenIds = ownedIds;
+      stakedTokenIds = stakedIds;
+      const cards = [
+        ...ownedIds.map(id => ({id, staked:false})),
+        ...stakedIds.map(id => ({id, staked:true}))
+      ].map(card => {
+        const rarity = raritySnapshot.get(card.id.toString());
+        return {
+          ...card,
+          state: card.staked ? (rarityVaultActive ? 'STAKED' : 'STAKED · LEGACY') : 'READY',
+          rarity: rarity?.tier || 'UNRANKED',
+          daily: rarity?.dailyFrogs || 0,
+          rateLive: rarityVaultActive
+        };
+      });
+      frogSummary.textContent = rarityVaultActive
+        ? `WALLET: ${ownedIds.length} · STAKED: ${stakedIds.length} · RARITY REWARDS: LIVE`
+        : `WALLET: ${ownedIds.length} · STAKED: ${stakedIds.length} · VAULT RATE: 100 $FROGS/DAY`;
+      if (!cards.length) {
+        frogGrid.innerHTML = '<article class="frog-card empty">No Ink Frogs found in this wallet or Vault.</article>';
+        selectedTokenIds.clear();
+        syncSelection();
+        return;
+      }
+      const availableIds = new Set(cards.map(card => card.id.toString()));
+      [...selectedTokenIds].forEach(id => {
+        if (!availableIds.has(id)) selectedTokenIds.delete(id);
+      });
+      if (!selectedTokenIds.size && cards.length === 1) selectedTokenIds.add(cards[0].id.toString());
+      frogGrid.innerHTML = cards.map(({id, state, rarity, daily, rateLive, staked}) => `
+        <article class="frog-card${staked ? ' staked' : ''}" data-token-id="${id}">
+          <img src="collection/generated/images/${id}.png" alt="Ink Frog #${id}" />
+          <div class="frog-info">
+            <div class="frog-status-row"><strong>INK FROG</strong><span class="frog-state">${state}</span></div>
+            <table class="frog-table" aria-label="Ink Frog ${id} staking details">
+              <thead><tr><th>TOKEN</th><th>RARITY</th><th>RARITY RATE</th></tr></thead>
+              <tbody><tr><td>#${id}</td><td>${rarity}</td><td>${daily}</td></tr></tbody>
+            </table>
+            <div class="rate-note${rateLive ? ' live' : ''}">${rateLive ? 'LIVE ONCHAIN · $FROGS/DAY' : 'ACTIVATES WITH RARITY VAULT'}</div>
+          </div>
+        </article>
+      `).join('');
+      frogGrid.querySelectorAll('[data-token-id]').forEach(card => {
+        card.addEventListener('click', () => {
+          const id = card.dataset.tokenId;
+          if (selectedTokenIds.has(id)) selectedTokenIds.delete(id);
+          else selectedTokenIds.add(id);
+          syncSelection();
+        });
+      });
+      syncSelection();
+    }
+
+    async function readVaultState(address) {
+      if (!STAKING_CONTRACT) return {stakedIds:[], xp:0n};
+      const account = addressWord(address);
+      const [staked, xp, stakedTokens] = await Promise.all([
+        ethCall(STAKING_CONTRACT, `0x16765391${account}`),
+        ethCall(STAKING_CONTRACT, `0x96da75bc${account}`),
+        ethCall(STAKING_CONTRACT, `0xab08d4fc${account}`),
+      ]);
+      stakedCount.textContent = Number(BigInt(staked));
+      const stakedIds = decodeUintArray(stakedTokens);
+      await configureFrogsCounter(address, stakedIds, BigInt(xp));
+      return {stakedIds, xp:BigInt(xp)};
+    }
+
+    async function validateVaultContract() {
+      if (!STAKING_CONTRACT) throw new Error('The staking contract is not deployed yet.');
+      const code = await readRpc('eth_getCode', [STAKING_CONTRACT, 'latest']);
+      if (!code || code === '0x') throw new Error('Saved Vault address has no contract on Ink Mainnet. Deploy the Vault again.');
+      const configuredNft = await ethCall(STAKING_CONTRACT, '0xafe048ee');
+      const decodedAddress = `0x${configuredNft.slice(-40)}`.toLowerCase();
+      if (decodedAddress !== NFT_CONTRACT.toLowerCase()) {
+        throw new Error('Saved Vault belongs to a different NFT contract. Deploy the correct Ink Frogs Vault.');
+      }
+      let directMode;
+      try { directMode = await ethCall(STAKING_CONTRACT, '0x4fb2308e'); }
+      catch { throw new Error('This is the old incompatible Vault. Deploy the new SeaDrop-compatible Vault first.'); }
+      if (BigInt(directMode) === 0n) throw new Error('This is the old incompatible Vault. Deploy the new SeaDrop-compatible Vault first.');
+      try {
+        const sampleRate = await ethCall(STAKING_CONTRACT, `0xa4f7622e${word(1)}`);
+        rarityVaultActive = BigInt(sampleRate) === 1000n;
+      } catch {
+        rarityVaultActive = false;
+      }
+      return rarityVaultActive;
+    }
+
+    async function refreshDashboard(address) {
+      dashboardAccount = address;
+      frogSummary.textContent = 'Scanning Ink Mainnet for your Frogs…';
+      const balance = await readBalance(address);
+      ownedCount.textContent = balance;
+      const [ownedIds, vaultState] = await Promise.all([
+        loadOwnedTokenIds(address, balance),
+        readVaultState(address)
+      ]);
+      await loadRaritySnapshot();
+      renderInventory(ownedIds, vaultState.stakedIds);
+      vaultLive.innerHTML = '<i></i> Vault live · $FROGS accruing now';
+    }
+
+    function setVaultButtons(enabled) {
+      [approveBtn, stakeBtn, claimBtn, unstakeBtn].forEach(button => button.disabled = !enabled || !STAKING_CONTRACT);
+      approveBtn.disabled = true;
+      if (STAKING_CONTRACT) contractNotice.innerHTML = '<b>Vault live.</b> Every wallet transaction shows a confirmation before anything moves.';
+    }
+
+    async function configureVaultAvailability() {
+      try {
+        const hasRarityRewards = await validateVaultContract();
+        setVaultButtons(true);
+        if (!hasRarityRewards) {
+          contractNotice.innerHTML = '<b>Flat-rate Vault active.</b> Staking, claiming and unstaking work at 100 $FROGS/day. Upgrade later to activate rarity rates.';
+        }
+        return true;
+      } catch (error) {
+        setVaultButtons(false);
+        contractNotice.innerHTML = '<b>Vault unavailable.</b> Refresh the page or contact the Ink Frogs Lab team before submitting a transaction.';
+        notify(error?.message || 'Deploy the compatible Vault first.');
+        return false;
+      }
+    }
+
+    async function finishWalletConnection(provider, knownAddress='') {
+      if (!provider || connectionInProgress) return;
+      connectionInProgress = true;
+      try {
+        walletProvider = provider;
+        const accounts = knownAddress
+          ? [knownAddress]
+          : await walletProvider.request({method:'eth_accounts'});
+        const address = accounts[0];
+        if (!address) throw new Error('The selected wallet returned no account.');
+        if (dashboardAccount?.toLowerCase() === address.toLowerCase()) return;
+        await ensureInk(walletProvider);
+        walletLabel.textContent = short(address);
+        manualDisconnect = false;
+        setConnectionButtons(true);
+        const vaultReady = await configureVaultAvailability();
+        await refreshDashboard(address);
+        notify(vaultReady
+          ? 'Wallet connected. Your Ink Frogs are loaded.'
+          : 'Wallet connected. Deploy the SeaDrop-compatible Vault before staking.');
+      } finally {
+        connectionInProgress = false;
+      }
+    }
+
+    window.addEventListener('inkfrogs:wallet-provider', event => {
+      const {provider, address, isConnected} = event.detail || {};
+      if (!manualDisconnect && provider && isConnected) {
+        Promise.resolve(window.inkFrogsAppKit?.close?.()).catch(() => {});
+        finishWalletConnection(provider, address).catch(error => notify(error?.message || 'Wallet connection failed.'));
+      }
+    });
+
+    async function restoreAppKitSession() {
+      const appKit = window.inkFrogsAppKit;
+      if (!appKit) return false;
+      const saved = window.inkFrogsWalletState || {};
+      const provider = saved.provider || appKit.getWalletProvider?.();
+      const address = saved.address || appKit.getAddress?.() || '';
+      const isConnected = saved.isConnected ?? appKit.getIsConnectedState?.();
+      if (!provider || !isConnected) return false;
+      try { await appKit.close?.(); } catch {}
+      await finishWalletConnection(provider, address);
+      return true;
+    }
+
+    window.addEventListener('inkfrogs:appkit-ready', () => {
+      restoreAppKitSession().catch(error => notify(error?.message || 'Wallet session restore failed.'));
+    });
+    setTimeout(() => {
+      restoreAppKitSession().catch(() => {});
+    }, 0);
+
+    async function restoreInjectedSession() {
+      if (dashboardAccount) return false;
+      const provider = await findWalletProvider(1800);
+      if (!provider) return false;
+      const accounts = await provider.request({method:'eth_accounts'});
+      if (!accounts?.[0]) return false;
+      await finishWalletConnection(provider, accounts[0]);
+      return true;
+    }
+
+    setTimeout(() => {
+      restoreInjectedSession().catch(() => {});
+    }, 150);
+
+    async function connectWallet() {
+      try {
+        manualDisconnect = false;
+        notify('Looking for MetaMask or Rabby…');
+        const injectedProvider = await findWalletProvider(4000);
+        if (injectedProvider) {
+          try { await window.inkFrogsAppKit?.close?.(); } catch {}
+          const accounts = await injectedProvider.request({method:'eth_requestAccounts'});
+          await finishWalletConnection(injectedProvider, accounts[0]);
+          return;
+        }
+        if (window.inkFrogsAppKit) {
+          if (await restoreAppKitSession()) {
+            notify('Wallet already connected. Your Ink Frogs are loaded.');
+            return;
+          }
+          await window.inkFrogsAppKit.open({view:'Connect', namespace:'eip155'});
+          notify('Choose any wallet or scan the WalletConnect QR code.');
+          return;
+        }
+        throw new Error('No wallet extension detected. Open this URL in Brave/Chrome with MetaMask unlocked.');
+      } catch (error) {
+        notify(error?.message || 'Wallet connection was cancelled.');
+      }
+    }
+
+    async function disconnectWallet() {
+      manualDisconnect = true;
+      const provider = walletProvider;
+      try {
+        await window.inkFrogsAppKit?.disconnect?.();
+      } catch {}
+      try {
+        await provider?.request?.({method:'wallet_revokePermissions', params:[{eth_accounts:{}}]});
+      } catch {}
+      resetWalletDashboard();
+      notify('Wallet disconnected from the Vault.');
+    }
+
+    async function handleConnectionButton(event) {
+      if (dashboardAccount && event.currentTarget === document.getElementById('connectMain')) return;
+      if (dashboardAccount) await disconnectWallet();
+      else await connectWallet();
+    }
+
+    connectButtons.forEach(button => button.addEventListener('click', handleConnectionButton));
+    async function connectedAccount() {
+      if (!walletProvider) walletProvider = await findWalletProvider();
+      if (!walletProvider) throw new Error('No compatible wallet detected.');
+      const accounts = await walletProvider.request({ method: 'eth_accounts' });
+      if (!accounts[0]) throw new Error('Connect your wallet first.');
+      await ensureInk(walletProvider);
+      if (!STAKING_CONTRACT) throw new Error('The staking contract is not deployed yet.');
+      return accounts[0];
+    }
+
+    approveBtn.addEventListener('click', async () => {
+      notify('No approval is needed. Select a Frog and press STAKE.');
+    });
+
+    async function runVaultAction(selector, successMessage, action) {
+      const account = await connectedAccount();
+      const ids = selectedIdsFor(action);
+      await validateVaultContract();
+      const actionButtons = [approveBtn, stakeBtn, claimBtn, unstakeBtn];
+      actionButtons.forEach(button => button.disabled = true);
+      notify(`Confirm ${action.toUpperCase()} in your wallet…`);
+      try {
+      if (action === 'stake') {
+        for (const id of ids) {
+          const directTransfer = `0x42842e0e${addressWord(account)}${addressWord(STAKING_CONTRACT)}${word(id)}`;
+          await sendTransaction(NFT_CONTRACT, directTransfer, account);
+        }
+      } else {
+        await sendTransaction(STAKING_CONTRACT, encodeUintArray(selector, ids), account);
+      }
+      if (action === 'stake' || action === 'unstake') {
+        const expectedStaked = action === 'stake';
+        let stateVerified = false;
+        for (let attempt = 0; attempt < 15; attempt += 1) {
+          const encoded = await ethCall(STAKING_CONTRACT, `0xab08d4fc${addressWord(account)}`);
+          const current = new Set(decodeUintArray(encoded).map(id => id.toString()));
+          stateVerified = ids.every(id => current.has(id.toString()) === expectedStaked);
+          if (stateVerified) break;
+          await wait(2000);
+        }
+        if (!stateVerified) {
+          throw new Error('Transaction confirmed, but the Vault state did not change. Check the transaction on Ink Explorer.');
+        }
+      }
+      await refreshDashboard(account);
+      notify(successMessage);
+      } finally {
+        actionButtons.forEach(button => button.disabled = false);
+        approveBtn.disabled = true;
+      }
+    }
+
+    stakeBtn.addEventListener('click', () => runVaultAction('0x0fbf0a93', 'Frogs entered the Vault. $FROGS are now accruing.', 'stake').catch(error => notify(error?.message || 'Stake failed.')));
+    claimBtn.addEventListener('click', () => runVaultAction('0xdd4ed99d', '$FROGS claimed successfully.', 'claim').catch(error => notify(error?.message || 'Claim failed.')));
+    unstakeBtn.addEventListener('click', () => runVaultAction('0xe449f341', 'Frogs returned to your wallet.', 'unstake').catch(error => notify(error?.message || 'Unstake failed.')));
+
+    window.setInterval(async () => {
+      if (!dashboardAccount || !STAKING_CONTRACT) return;
+      try {
+        const xp = await ethCall(STAKING_CONTRACT, `0x96da75bc${addressWord(dashboardAccount)}`);
+        await configureFrogsCounter(dashboardAccount, stakedTokenIds, BigInt(xp));
+      } catch {}
+    }, 15000);
+    window.setInterval(renderFrogsCounter, 1000);
+  </script>
+</body>
+</html>
