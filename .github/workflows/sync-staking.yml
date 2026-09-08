@@ -13,21 +13,116 @@ jobs:
       - name: Check out target repository
         uses: actions/checkout@v4
 
-      - name: Download verified staking source
-        run: git clone --depth 1 https://github.com/Nikotine05/ink-frogs-staking-vercel.git "$RUNNER_TEMP/staking-source"
-
-      - name: Mirror production files safely
+      - name: Download verified production assets
         run: |
-          rsync -a --delete             --exclude='.git/'             --exclude='.github/'             --exclude='.vercel/'             --exclude='social/'             "$RUNNER_TEMP/staking-source/" ./
+          set -euo pipefail
+          BASE="https://ink-frogs-staking-vercel.vercel.app"
+          mkdir -p assets collection/brand-assets collection/generated/images
+          curl --retry 3 -fsSL "$BASE/wallet-appkit.bundle.js" -o wallet-appkit.bundle.js
+          curl --retry 3 -fsSL "$BASE/assets/reveal_assembly_base.png" -o assets/reveal_assembly_base.png
+          curl --retry 3 -fsSL "$BASE/collection/brand-assets/logo.png" -o collection/brand-assets/logo.png
+          curl --retry 3 -fsSL "$BASE/collection/generated/rarity-500.json" -o collection/generated/rarity-500.json
+          seq 1 500 | xargs -P 20 -I{} sh -c 'curl --retry 3 --retry-delay 1 -fsSL "$1/collection/generated/images/{}.png" -o "collection/generated/images/{}.png"' _ "$BASE"
+          cat > vercel.json <<'JSON'
+          {
+            "cleanUrls": true,
+            "trailingSlash": false,
+            "headers": [
+              {"source": "/(.*)\\.(png|js|json)", "headers": [{"key": "Cache-Control", "value": "public, max-age=31536000, immutable"}]},
+              {"source": "/", "headers": [{"key": "Cache-Control", "value": "public, max-age=0, must-revalidate"}]}
+            ]
+          }
+          JSON
 
-      - name: Commit synchronized site
+      - name: Add public total staked counter
         run: |
+          cat > /tmp/total-staked.patch <<'PATCH'
+          diff --git a/index.html b/index.html
+          --- a/index.html
+          +++ b/index.html
+          @@ -107,7 +107,7 @@
+               .wallet { margin: 26px 0; min-height: 78px; display: flex; justify-content: space-between; align-items: center; gap: 22px; padding: 18px 20px; border: 1px dashed rgba(0,245,212,.3); background: rgba(0,0,0,.2); }
+               .wallet small { display: block; color: var(--muted); font-size: 16px; }
+               .wallet strong { color: var(--white); font-size: 21px; }
+          -    .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+          +    .stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+               .stat { min-height: 92px; padding: 18px 16px; background: rgba(2,1,12,.55); border: 1px solid rgba(156,77,255,.24); }
+               .stat span { display: block; color: var(--muted); font-size: 15px; }
+               .stat strong { display: block; margin-top: 8px; font-family: 'Press Start 2P', monospace; font-size: 17px; color: var(--gold); }
+          @@ -172,6 +172,7 @@
+               .navlinks a { display: none; }
+               .navlinks .market-link { display: inline-flex; }
+               main { padding-top: 45px; }
+          +      .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+               .frog-grid, .utility-grid { grid-template-columns: 1fr 1fr; }
+             }
+             @media (max-width: 560px) {
+          @@ -231,7 +232,8 @@
+                   </div>
+                   <div class="stats">
+                     <div class="stat"><span>OWNED</span><strong id="ownedCount">—</strong></div>
+          -          <div class="stat"><span>STAKED</span><strong id="stakedCount">—</strong></div>
+          +          <div class="stat"><span>YOUR STAKED</span><strong id="stakedCount">—</strong></div>
+          +          <div class="stat"><span>TOTAL STAKED</span><strong id="totalStakedCount" aria-live="polite">—</strong></div>
+                     <div class="stat"><span>$FROGS</span><strong id="xpCount">—</strong></div>
+                   </div>
+                   <div class="actions">
+          @@ -313,6 +315,7 @@
+               const walletLabel = document.getElementById('walletLabel');
+               const ownedCount = document.getElementById('ownedCount');
+               const stakedCount = document.getElementById('stakedCount');
+          +    const totalStakedCount = document.getElementById('totalStakedCount');
+               const xpCount = document.getElementById('xpCount');
+               const approveBtn = document.getElementById('approveBtn');
+               const stakeBtn = document.getElementById('stakeBtn');
+          @@ -661,6 +664,24 @@
+               return {stakedIds, xp:BigInt(xp)};
+             }
+          
+          +    async function refreshTotalStaked() {
+          +      if (!STAKING_CONTRACT) {
+          +        totalStakedCount.textContent = '—';
+          +        return;
+          +      }
+          +      try {
+          +        // Every tracked stake is held by the Vault, so the collection balance
+          +        // provides a fast public total without requiring a connected wallet.
+          +        const result = await ethCall(
+          +          NFT_CONTRACT,
+          +          '0x70a08231' + addressWord(STAKING_CONTRACT)
+          +        );
+          +        totalStakedCount.textContent = Number(BigInt(result)).toLocaleString('en-US');
+          +      } catch {
+          +        totalStakedCount.textContent = '—';
+          +      }
+          +    }
+          +
+               async function validateVaultContract() {
+                 if (!STAKING_CONTRACT) throw new Error('The staking contract is not deployed yet.');
+                 const code = await readRpc('eth_getCode', [STAKING_CONTRACT, 'latest']);
+          @@ -895,6 +916,8 @@
+                   await configureFrogsCounter(dashboardAccount, stakedTokenIds, BigInt(xp));
+                 } catch {}
+               }, 15000);
+          +    refreshTotalStaked();
+          +    window.setInterval(refreshTotalStaked, 30000);
+               window.setInterval(renderFrogsCounter, 1000);
+             </script>
+           </body>
+          PATCH
+          git apply --check /tmp/total-staked.patch
+          git apply /tmp/total-staked.patch
+
+      - name: Validate and commit synchronized site
+        run: |
+          set -euo pipefail
+          test "$(find collection/generated/images -type f -name '*.png' | wc -l)" -eq 500
+          grep -q 'id="totalStakedCount"' index.html
+          grep -q 'refreshTotalStaked();' index.html
+          test -s wallet-appkit.bundle.js
+          test -s assets/reveal_assembly_base.png
           git config user.name "ink-frogs-deploy-bot"
           git config user.email "actions@users.noreply.github.com"
           git add -A
-          if git diff --cached --quiet; then
-            echo "Site already synchronized."
-            exit 0
-          fi
-          git commit -m "Sync complete staking website"
+          git commit -m "Sync complete staking website with total counter"
           git push
