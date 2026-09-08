@@ -110,8 +110,7 @@ jobs:
              </script>
            </body>
           PATCH
-          git apply --check /tmp/total-staked.patch
-          git apply /tmp/total-staked.patch
+          patch --batch --forward -p1 -l < /tmp/total-staked.patch
 
       - name: Validate and commit synchronized site
         run: |
