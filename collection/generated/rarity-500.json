@@ -1,0 +1,3515 @@
+{
+  "source": "Ink Frogs contract metadata snapshot (Token IDs 1-500)",
+  "scoring": "Sum of supply / trait occurrence count; Rarity Tier excluded; ties break by token ID",
+  "tierPolicy": "25 Legendary, next 75 Epic, next 150 Rare, remaining ordinary Common; explicit 1/1 metadata overrides rank",
+  "supply": 500,
+  "counts": {
+    "Common": 248,
+    "Rare": 150,
+    "Epic": 75,
+    "Legendary": 25,
+    "1/1": 2
+  },
+  "tokens": [
+    {
+      "tokenId": 1,
+      "tier": "1/1",
+      "dailyFrogs": 1000,
+      "traitRarityScore": 2507.8125,
+      "ordinaryRank": null
+    },
+    {
+      "tokenId": 2,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 13.73059064,
+      "ordinaryRank": 498
+    },
+    {
+      "tokenId": 3,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 14.24177777,
+      "ordinaryRank": 497
+    },
+    {
+      "tokenId": 4,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 15.1551545,
+      "ordinaryRank": 494
+    },
+    {
+      "tokenId": 5,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 18.04240961,
+      "ordinaryRank": 454
+    },
+    {
+      "tokenId": 6,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 21.20290939,
+      "ordinaryRank": 364
+    },
+    {
+      "tokenId": 7,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 16.10714689,
+      "ordinaryRank": 487
+    },
+    {
+      "tokenId": 8,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 16.87335672,
+      "ordinaryRank": 473
+    },
+    {
+      "tokenId": 9,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 23.81972529,
+      "ordinaryRank": 276
+    },
+    {
+      "tokenId": 10,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 44.39108911,
+      "ordinaryRank": 49
+    },
+    {
+      "tokenId": 11,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 15.19377016,
+      "ordinaryRank": 493
+    },
+    {
+      "tokenId": 12,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 16.76213338,
+      "ordinaryRank": 477
+    },
+    {
+      "tokenId": 13,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 21.1389718,
+      "ordinaryRank": 368
+    },
+    {
+      "tokenId": 14,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 18.7613337,
+      "ordinaryRank": 438
+    },
+    {
+      "tokenId": 15,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 21.62417085,
+      "ordinaryRank": 352
+    },
+    {
+      "tokenId": 16,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 22.4133083,
+      "ordinaryRank": 321
+    },
+    {
+      "tokenId": 17,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 28.25457865,
+      "ordinaryRank": 172
+    },
+    {
+      "tokenId": 18,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 28.08179654,
+      "ordinaryRank": 178
+    },
+    {
+      "tokenId": 19,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 17.30351388,
+      "ordinaryRank": 466
+    },
+    {
+      "tokenId": 20,
+      "tier": "Legendary",
+      "dailyFrogs": 300,
+      "traitRarityScore": 82.75574273,
+      "ordinaryRank": 2
+    },
+    {
+      "tokenId": 21,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 15.25572975,
+      "ordinaryRank": 492
+    },
+    {
+      "tokenId": 22,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 27.50477526,
+      "ordinaryRank": 186
+    },
+    {
+      "tokenId": 23,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 33.74491823,
+      "ordinaryRank": 103
+    },
+    {
+      "tokenId": 24,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 22.19731758,
+      "ordinaryRank": 327
+    },
+    {
+      "tokenId": 25,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 27.00695362,
+      "ordinaryRank": 198
+    },
+    {
+      "tokenId": 26,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 17.77914521,
+      "ordinaryRank": 458
+    },
+    {
+      "tokenId": 27,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 26.94020927,
+      "ordinaryRank": 199
+    },
+    {
+      "tokenId": 28,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 18.63296466,
+      "ordinaryRank": 441
+    },
+    {
+      "tokenId": 29,
+      "tier": "Legendary",
+      "dailyFrogs": 300,
+      "traitRarityScore": 82.09534174,
+      "ordinaryRank": 4
+    },
+    {
+      "tokenId": 30,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 19.64938849,
+      "ordinaryRank": 416
+    },
+    {
+      "tokenId": 31,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 22.12116029,
+      "ordinaryRank": 333
+    },
+    {
+      "tokenId": 32,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 26.17291822,
+      "ordinaryRank": 213
+    },
+    {
+      "tokenId": 33,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 20.31255122,
+      "ordinaryRank": 396
+    },
+    {
+      "tokenId": 34,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 18.09158416,
+      "ordinaryRank": 453
+    },
+    {
+      "tokenId": 35,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 23.57757982,
+      "ordinaryRank": 287
+    },
+    {
+      "tokenId": 36,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 24.02368699,
+      "ordinaryRank": 273
+    },
+    {
+      "tokenId": 37,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 24.81587222,
+      "ordinaryRank": 251
+    },
+    {
+      "tokenId": 38,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 28.41521707,
+      "ordinaryRank": 170
+    },
+    {
+      "tokenId": 39,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 19.46110688,
+      "ordinaryRank": 423
+    },
+    {
+      "tokenId": 40,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 17.58039703,
+      "ordinaryRank": 464
+    },
+    {
+      "tokenId": 41,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 17.96914847,
+      "ordinaryRank": 455
+    },
+    {
+      "tokenId": 42,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 22.90030139,
+      "ordinaryRank": 306
+    },
+    {
+      "tokenId": 43,
+      "tier": "Legendary",
+      "dailyFrogs": 300,
+      "traitRarityScore": 78.47428878,
+      "ordinaryRank": 8
+    },
+    {
+      "tokenId": 44,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 25.27685764,
+      "ordinaryRank": 242
+    },
+    {
+      "tokenId": 45,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 20.52961173,
+      "ordinaryRank": 388
+    },
+    {
+      "tokenId": 46,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 16.36216959,
+      "ordinaryRank": 481
+    },
+    {
+      "tokenId": 47,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 29.09574852,
+      "ordinaryRank": 161
+    },
+    {
+      "tokenId": 48,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 17.37612157,
+      "ordinaryRank": 465
+    },
+    {
+      "tokenId": 49,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 14.68258302,
+      "ordinaryRank": 496
+    },
+    {
+      "tokenId": 50,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 40.10953092,
+      "ordinaryRank": 67
+    },
+    {
+      "tokenId": 51,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 24.17051454,
+      "ordinaryRank": 264
+    },
+    {
+      "tokenId": 52,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 22.41670811,
+      "ordinaryRank": 320
+    },
+    {
+      "tokenId": 53,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 18.29792059,
+      "ordinaryRank": 446
+    },
+    {
+      "tokenId": 54,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 25.01170655,
+      "ordinaryRank": 248
+    },
+    {
+      "tokenId": 55,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 20.44240198,
+      "ordinaryRank": 393
+    },
+    {
+      "tokenId": 56,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 39.09557894,
+      "ordinaryRank": 70
+    },
+    {
+      "tokenId": 57,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 25.58356377,
+      "ordinaryRank": 230
+    },
+    {
+      "tokenId": 58,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 14.74454262,
+      "ordinaryRank": 495
+    },
+    {
+      "tokenId": 59,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 32.97779717,
+      "ordinaryRank": 107
+    },
+    {
+      "tokenId": 60,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 21.1833656,
+      "ordinaryRank": 366
+    },
+    {
+      "tokenId": 61,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 26.46763779,
+      "ordinaryRank": 207
+    },
+    {
+      "tokenId": 62,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 22.88893962,
+      "ordinaryRank": 307
+    },
+    {
+      "tokenId": 63,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 31.3984195,
+      "ordinaryRank": 128
+    },
+    {
+      "tokenId": 64,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 24.45859399,
+      "ordinaryRank": 258
+    },
+    {
+      "tokenId": 65,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 32.04754016,
+      "ordinaryRank": 119
+    },
+    {
+      "tokenId": 66,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 16.61833402,
+      "ordinaryRank": 480
+    },
+    {
+      "tokenId": 67,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 46.03716677,
+      "ordinaryRank": 44
+    },
+    {
+      "tokenId": 68,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 23.71890647,
+      "ordinaryRank": 282
+    },
+    {
+      "tokenId": 69,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 28.1761871,
+      "ordinaryRank": 175
+    },
+    {
+      "tokenId": 70,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 26.26210598,
+      "ordinaryRank": 211
+    },
+    {
+      "tokenId": 71,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 26.08713323,
+      "ordinaryRank": 215
+    },
+    {
+      "tokenId": 72,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 26.53555615,
+      "ordinaryRank": 206
+    },
+    {
+      "tokenId": 73,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 22.16168541,
+      "ordinaryRank": 328
+    },
+    {
+      "tokenId": 74,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 23.81494454,
+      "ordinaryRank": 277
+    },
+    {
+      "tokenId": 75,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 32.13035111,
+      "ordinaryRank": 117
+    },
+    {
+      "tokenId": 76,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 20.48101763,
+      "ordinaryRank": 390
+    },
+    {
+      "tokenId": 77,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 20.72727807,
+      "ordinaryRank": 379
+    },
+    {
+      "tokenId": 78,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 24.03200505,
+      "ordinaryRank": 272
+    },
+    {
+      "tokenId": 79,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 17.66554196,
+      "ordinaryRank": 461
+    },
+    {
+      "tokenId": 80,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 19.52902525,
+      "ordinaryRank": 419
+    },
+    {
+      "tokenId": 81,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 19.71134809,
+      "ordinaryRank": 415
+    },
+    {
+      "tokenId": 82,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 17.71412577,
+      "ordinaryRank": 460
+    },
+    {
+      "tokenId": 83,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 19.77528568,
+      "ordinaryRank": 412
+    },
+    {
+      "tokenId": 84,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 23.39161668,
+      "ordinaryRank": 289
+    },
+    {
+      "tokenId": 85,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 22.70495449,
+      "ordinaryRank": 313
+    },
+    {
+      "tokenId": 86,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 17.77608536,
+      "ordinaryRank": 459
+    },
+    {
+      "tokenId": 87,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 19.9698305,
+      "ordinaryRank": 406
+    },
+    {
+      "tokenId": 88,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 37.45295802,
+      "ordinaryRank": 75
+    },
+    {
+      "tokenId": 89,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 19.38612409,
+      "ordinaryRank": 426
+    },
+    {
+      "tokenId": 90,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 25.31627977,
+      "ordinaryRank": 237
+    },
+    {
+      "tokenId": 91,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 41.8786751,
+      "ordinaryRank": 60
+    },
+    {
+      "tokenId": 92,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 20.46765214,
+      "ordinaryRank": 392
+    },
+    {
+      "tokenId": 93,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 24.16088573,
+      "ordinaryRank": 266
+    },
+    {
+      "tokenId": 94,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 18.69739611,
+      "ordinaryRank": 439
+    },
+    {
+      "tokenId": 95,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 23.03403013,
+      "ordinaryRank": 302
+    },
+    {
+      "tokenId": 96,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 16.3515215,
+      "ordinaryRank": 482
+    },
+    {
+      "tokenId": 97,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 23.63669321,
+      "ordinaryRank": 285
+    },
+    {
+      "tokenId": 98,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 19.49428758,
+      "ordinaryRank": 422
+    },
+    {
+      "tokenId": 99,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 20.09078448,
+      "ordinaryRank": 404
+    },
+    {
+      "tokenId": 100,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 25.64138414,
+      "ordinaryRank": 228
+    },
+    {
+      "tokenId": 101,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 40.56851542,
+      "ordinaryRank": 65
+    },
+    {
+      "tokenId": 102,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 16.82715282,
+      "ordinaryRank": 475
+    },
+    {
+      "tokenId": 103,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 35.46421162,
+      "ordinaryRank": 86
+    },
+    {
+      "tokenId": 104,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 16.16910648,
+      "ordinaryRank": 485
+    },
+    {
+      "tokenId": 105,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 24.53120168,
+      "ordinaryRank": 255
+    },
+    {
+      "tokenId": 106,
+      "tier": "Legendary",
+      "dailyFrogs": 300,
+      "traitRarityScore": 74.46519172,
+      "ordinaryRank": 15
+    },
+    {
+      "tokenId": 107,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 22.09268583,
+      "ordinaryRank": 335
+    },
+    {
+      "tokenId": 108,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 20.67217846,
+      "ordinaryRank": 384
+    },
+    {
+      "tokenId": 109,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 23.89141632,
+      "ordinaryRank": 275
+    },
+    {
+      "tokenId": 110,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 18.61753434,
+      "ordinaryRank": 442
+    },
+    {
+      "tokenId": 111,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 23.16236407,
+      "ordinaryRank": 297
+    },
+    {
+      "tokenId": 112,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 24.14788034,
+      "ordinaryRank": 268
+    },
+    {
+      "tokenId": 113,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 27.40923996,
+      "ordinaryRank": 194
+    },
+    {
+      "tokenId": 114,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 42.2655103,
+      "ordinaryRank": 59
+    },
+    {
+      "tokenId": 115,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 16.20772214,
+      "ordinaryRank": 484
+    },
+    {
+      "tokenId": 116,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 25.23192017,
+      "ordinaryRank": 244
+    },
+    {
+      "tokenId": 117,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 21.13591195,
+      "ordinaryRank": 369
+    },
+    {
+      "tokenId": 118,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 40.8481464,
+      "ordinaryRank": 63
+    },
+    {
+      "tokenId": 119,
+      "tier": "Legendary",
+      "dailyFrogs": 300,
+      "traitRarityScore": 60.73267885,
+      "ordinaryRank": 25
+    },
+    {
+      "tokenId": 120,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 38.93813383,
+      "ordinaryRank": 71
+    },
+    {
+      "tokenId": 121,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 29.03378892,
+      "ordinaryRank": 162
+    },
+    {
+      "tokenId": 122,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 19.10553614,
+      "ordinaryRank": 434
+    },
+    {
+      "tokenId": 123,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 43.4073305,
+      "ordinaryRank": 55
+    },
+    {
+      "tokenId": 124,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 16.6670203,
+      "ordinaryRank": 479
+    },
+    {
+      "tokenId": 125,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 20.71557487,
+      "ordinaryRank": 381
+    },
+    {
+      "tokenId": 126,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 18.10634721,
+      "ordinaryRank": 451
+    },
+    {
+      "tokenId": 127,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 24.49095655,
+      "ordinaryRank": 257
+    },
+    {
+      "tokenId": 128,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 19.52893307,
+      "ordinaryRank": 420
+    },
+    {
+      "tokenId": 129,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 23.07315268,
+      "ordinaryRank": 300
+    },
+    {
+      "tokenId": 130,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 15.84875665,
+      "ordinaryRank": 488
+    },
+    {
+      "tokenId": 131,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 23.14930996,
+      "ordinaryRank": 298
+    },
+    {
+      "tokenId": 132,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 18.67949394,
+      "ordinaryRank": 440
+    },
+    {
+      "tokenId": 133,
+      "tier": "Legendary",
+      "dailyFrogs": 300,
+      "traitRarityScore": 63.63008269,
+      "ordinaryRank": 22
+    },
+    {
+      "tokenId": 134,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 48.03662004,
+      "ordinaryRank": 41
+    },
+    {
+      "tokenId": 135,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 18.4803356,
+      "ordinaryRank": 444
+    },
+    {
+      "tokenId": 136,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 45.10471818,
+      "ordinaryRank": 47
+    },
+    {
+      "tokenId": 137,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 24.51792836,
+      "ordinaryRank": 256
+    },
+    {
+      "tokenId": 138,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 32.12729126,
+      "ordinaryRank": 118
+    },
+    {
+      "tokenId": 139,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 17.16978514,
+      "ordinaryRank": 468
+    },
+    {
+      "tokenId": 140,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 23.23114973,
+      "ordinaryRank": 294
+    },
+    {
+      "tokenId": 141,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 15.33756952,
+      "ordinaryRank": 491
+    },
+    {
+      "tokenId": 142,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 21.85789589,
+      "ordinaryRank": 344
+    },
+    {
+      "tokenId": 143,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 26.74295191,
+      "ordinaryRank": 201
+    },
+    {
+      "tokenId": 144,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 21.39935632,
+      "ordinaryRank": 356
+    },
+    {
+      "tokenId": 145,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 19.51565975,
+      "ordinaryRank": 421
+    },
+    {
+      "tokenId": 146,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 21.39210804,
+      "ordinaryRank": 360
+    },
+    {
+      "tokenId": 147,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 28.54978004,
+      "ordinaryRank": 168
+    },
+    {
+      "tokenId": 148,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 24.91073629,
+      "ordinaryRank": 249
+    },
+    {
+      "tokenId": 149,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 27.43694907,
+      "ordinaryRank": 191
+    },
+    {
+      "tokenId": 150,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 34.38299599,
+      "ordinaryRank": 96
+    },
+    {
+      "tokenId": 151,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 25.98143325,
+      "ordinaryRank": 220
+    },
+    {
+      "tokenId": 152,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 16.15583316,
+      "ordinaryRank": 486
+    },
+    {
+      "tokenId": 153,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 40.19137069,
+      "ordinaryRank": 66
+    },
+    {
+      "tokenId": 154,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 18.51498109,
+      "ordinaryRank": 443
+    },
+    {
+      "tokenId": 155,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 30.01982084,
+      "ordinaryRank": 145
+    },
+    {
+      "tokenId": 156,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 32.47298343,
+      "ordinaryRank": 114
+    },
+    {
+      "tokenId": 157,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 20.18697941,
+      "ordinaryRank": 402
+    },
+    {
+      "tokenId": 158,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 21.9055815,
+      "ordinaryRank": 340
+    },
+    {
+      "tokenId": 159,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 21.10473646,
+      "ordinaryRank": 370
+    },
+    {
+      "tokenId": 160,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 28.93940959,
+      "ordinaryRank": 165
+    },
+    {
+      "tokenId": 161,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 29.71775816,
+      "ordinaryRank": 149
+    },
+    {
+      "tokenId": 162,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 22.55766907,
+      "ordinaryRank": 318
+    },
+    {
+      "tokenId": 163,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 21.31107288,
+      "ordinaryRank": 361
+    },
+    {
+      "tokenId": 164,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 21.07395236,
+      "ordinaryRank": 371
+    },
+    {
+      "tokenId": 165,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 24.15971234,
+      "ordinaryRank": 267
+    },
+    {
+      "tokenId": 166,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 52.66109839,
+      "ordinaryRank": 34
+    },
+    {
+      "tokenId": 167,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 20.29514228,
+      "ordinaryRank": 398
+    },
+    {
+      "tokenId": 168,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 30.79260755,
+      "ordinaryRank": 138
+    },
+    {
+      "tokenId": 169,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 46.80797677,
+      "ordinaryRank": 42
+    },
+    {
+      "tokenId": 170,
+      "tier": "Legendary",
+      "dailyFrogs": 300,
+      "traitRarityScore": 67.39661582,
+      "ordinaryRank": 20
+    },
+    {
+      "tokenId": 171,
+      "tier": "Legendary",
+      "dailyFrogs": 300,
+      "traitRarityScore": 75.88975558,
+      "ordinaryRank": 13
+    },
+    {
+      "tokenId": 172,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 24.27992778,
+      "ordinaryRank": 261
+    },
+    {
+      "tokenId": 173,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 18.29033234,
+      "ordinaryRank": 447
+    },
+    {
+      "tokenId": 174,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 30.19032964,
+      "ordinaryRank": 144
+    },
+    {
+      "tokenId": 175,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 17.10782555,
+      "ordinaryRank": 471
+    },
+    {
+      "tokenId": 176,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 23.06639268,
+      "ordinaryRank": 301
+    },
+    {
+      "tokenId": 177,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 25.31011359,
+      "ordinaryRank": 239
+    },
+    {
+      "tokenId": 178,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 19.78512916,
+      "ordinaryRank": 411
+    },
+    {
+      "tokenId": 179,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 21.39439436,
+      "ordinaryRank": 358
+    },
+    {
+      "tokenId": 180,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 17.09041723,
+      "ordinaryRank": 472
+    },
+    {
+      "tokenId": 181,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 22.1144003,
+      "ordinaryRank": 334
+    },
+    {
+      "tokenId": 182,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 27.45022239,
+      "ordinaryRank": 188
+    },
+    {
+      "tokenId": 183,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 17.8873087,
+      "ordinaryRank": 456
+    },
+    {
+      "tokenId": 184,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 19.79237744,
+      "ordinaryRank": 410
+    },
+    {
+      "tokenId": 185,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 24.34360907,
+      "ordinaryRank": 259
+    },
+    {
+      "tokenId": 186,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 35.02816511,
+      "ordinaryRank": 90
+    },
+    {
+      "tokenId": 187,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 25.07962491,
+      "ordinaryRank": 247
+    },
+    {
+      "tokenId": 188,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 16.2895619,
+      "ordinaryRank": 483
+    },
+    {
+      "tokenId": 189,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 29.52817622,
+      "ordinaryRank": 154
+    },
+    {
+      "tokenId": 190,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 16.80074904,
+      "ordinaryRank": 476
+    },
+    {
+      "tokenId": 191,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 32.7853376,
+      "ordinaryRank": 110
+    },
+    {
+      "tokenId": 192,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 51.92063543,
+      "ordinaryRank": 36
+    },
+    {
+      "tokenId": 193,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 27.44745117,
+      "ordinaryRank": 189
+    },
+    {
+      "tokenId": 194,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 26.29245014,
+      "ordinaryRank": 210
+    },
+    {
+      "tokenId": 195,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 22.88249596,
+      "ordinaryRank": 308
+    },
+    {
+      "tokenId": 196,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 19.25239535,
+      "ordinaryRank": 430
+    },
+    {
+      "tokenId": 197,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 34.93708727,
+      "ordinaryRank": 92
+    },
+    {
+      "tokenId": 198,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 20.03179009,
+      "ordinaryRank": 405
+    },
+    {
+      "tokenId": 199,
+      "tier": "Legendary",
+      "dailyFrogs": 300,
+      "traitRarityScore": 67.28510508,
+      "ordinaryRank": 21
+    },
+    {
+      "tokenId": 200,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 28.23530049,
+      "ordinaryRank": 173
+    },
+    {
+      "tokenId": 201,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 25.10994335,
+      "ordinaryRank": 245
+    },
+    {
+      "tokenId": 202,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 30.88615759,
+      "ordinaryRank": 134
+    },
+    {
+      "tokenId": 203,
+      "tier": "Legendary",
+      "dailyFrogs": 300,
+      "traitRarityScore": 78.24307978,
+      "ordinaryRank": 9
+    },
+    {
+      "tokenId": 204,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 32.63033521,
+      "ordinaryRank": 112
+    },
+    {
+      "tokenId": 205,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 28.49614082,
+      "ordinaryRank": 169
+    },
+    {
+      "tokenId": 206,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 20.66334047,
+      "ordinaryRank": 385
+    },
+    {
+      "tokenId": 207,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 30.63113489,
+      "ordinaryRank": 139
+    },
+    {
+      "tokenId": 208,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 38.15352225,
+      "ordinaryRank": 74
+    },
+    {
+      "tokenId": 209,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 23.76874065,
+      "ordinaryRank": 279
+    },
+    {
+      "tokenId": 210,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 20.41309927,
+      "ordinaryRank": 394
+    },
+    {
+      "tokenId": 211,
+      "tier": "Legendary",
+      "dailyFrogs": 300,
+      "traitRarityScore": 70.66896587,
+      "ordinaryRank": 18
+    },
+    {
+      "tokenId": 212,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 21.49496961,
+      "ordinaryRank": 353
+    },
+    {
+      "tokenId": 213,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 25.95943799,
+      "ordinaryRank": 221
+    },
+    {
+      "tokenId": 214,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 23.32965709,
+      "ordinaryRank": 290
+    },
+    {
+      "tokenId": 215,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 21.83766313,
+      "ordinaryRank": 345
+    },
+    {
+      "tokenId": 216,
+      "tier": "Legendary",
+      "dailyFrogs": 300,
+      "traitRarityScore": 75.10668204,
+      "ordinaryRank": 14
+    },
+    {
+      "tokenId": 217,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 22.31273305,
+      "ordinaryRank": 326
+    },
+    {
+      "tokenId": 218,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 25.51645002,
+      "ordinaryRank": 234
+    },
+    {
+      "tokenId": 219,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 15.66634164,
+      "ordinaryRank": 490
+    },
+    {
+      "tokenId": 220,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 35.2137463,
+      "ordinaryRank": 88
+    },
+    {
+      "tokenId": 221,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 22.72155882,
+      "ordinaryRank": 312
+    },
+    {
+      "tokenId": 222,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 15.696535,
+      "ordinaryRank": 489
+    },
+    {
+      "tokenId": 223,
+      "tier": "Legendary",
+      "dailyFrogs": 300,
+      "traitRarityScore": 63.30149359,
+      "ordinaryRank": 23
+    },
+    {
+      "tokenId": 224,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 20.73712154,
+      "ordinaryRank": 378
+    },
+    {
+      "tokenId": 225,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 20.28647282,
+      "ordinaryRank": 399
+    },
+    {
+      "tokenId": 226,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 22.13535798,
+      "ordinaryRank": 332
+    },
+    {
+      "tokenId": 227,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 23.64218382,
+      "ordinaryRank": 284
+    },
+    {
+      "tokenId": 228,
+      "tier": "Legendary",
+      "dailyFrogs": 300,
+      "traitRarityScore": 78.75426692,
+      "ordinaryRank": 7
+    },
+    {
+      "tokenId": 229,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 38.46257887,
+      "ordinaryRank": 73
+    },
+    {
+      "tokenId": 230,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 17.15435482,
+      "ordinaryRank": 469
+    },
+    {
+      "tokenId": 231,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 17.61901268,
+      "ordinaryRank": 463
+    },
+    {
+      "tokenId": 232,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 24.31193337,
+      "ordinaryRank": 260
+    },
+    {
+      "tokenId": 233,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 21.14656004,
+      "ordinaryRank": 367
+    },
+    {
+      "tokenId": 234,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 34.91605146,
+      "ordinaryRank": 93
+    },
+    {
+      "tokenId": 235,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 25.58238976,
+      "ordinaryRank": 231
+    },
+    {
+      "tokenId": 236,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 33.88438899,
+      "ordinaryRank": 101
+    },
+    {
+      "tokenId": 237,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 22.92789524,
+      "ordinaryRank": 304
+    },
+    {
+      "tokenId": 238,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 31.13416343,
+      "ordinaryRank": 131
+    },
+    {
+      "tokenId": 239,
+      "tier": "Legendary",
+      "dailyFrogs": 300,
+      "traitRarityScore": 82.46730952,
+      "ordinaryRank": 3
+    },
+    {
+      "tokenId": 240,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 29.85537822,
+      "ordinaryRank": 148
+    },
+    {
+      "tokenId": 241,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 20.67695921,
+      "ordinaryRank": 383
+    },
+    {
+      "tokenId": 242,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 36.33762376,
+      "ordinaryRank": 79
+    },
+    {
+      "tokenId": 243,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 24.04941337,
+      "ordinaryRank": 270
+    },
+    {
+      "tokenId": 244,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 31.65520451,
+      "ordinaryRank": 125
+    },
+    {
+      "tokenId": 245,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 22.67287254,
+      "ordinaryRank": 315
+    },
+    {
+      "tokenId": 246,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 17.27332052,
+      "ordinaryRank": 467
+    },
+    {
+      "tokenId": 247,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 23.80231635,
+      "ordinaryRank": 278
+    },
+    {
+      "tokenId": 248,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 35.7073536,
+      "ordinaryRank": 85
+    },
+    {
+      "tokenId": 249,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 29.42916905,
+      "ordinaryRank": 156
+    },
+    {
+      "tokenId": 250,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 29.68877542,
+      "ordinaryRank": 151
+    },
+    {
+      "tokenId": 251,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 33.91770034,
+      "ordinaryRank": 100
+    },
+    {
+      "tokenId": 252,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 29.56717526,
+      "ordinaryRank": 153
+    },
+    {
+      "tokenId": 253,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 50.02951944,
+      "ordinaryRank": 38
+    },
+    {
+      "tokenId": 254,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 21.96754109,
+      "ordinaryRank": 338
+    },
+    {
+      "tokenId": 255,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 24.0367858,
+      "ordinaryRank": 271
+    },
+    {
+      "tokenId": 256,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 17.632286,
+      "ordinaryRank": 462
+    },
+    {
+      "tokenId": 257,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 27.43444579,
+      "ordinaryRank": 192
+    },
+    {
+      "tokenId": 258,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 29.00732795,
+      "ordinaryRank": 163
+    },
+    {
+      "tokenId": 259,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 31.74458283,
+      "ordinaryRank": 123
+    },
+    {
+      "tokenId": 260,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 35.74331394,
+      "ordinaryRank": 84
+    },
+    {
+      "tokenId": 261,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 30.86071326,
+      "ordinaryRank": 136
+    },
+    {
+      "tokenId": 262,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 25.09811507,
+      "ordinaryRank": 246
+    },
+    {
+      "tokenId": 263,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 22.1472387,
+      "ordinaryRank": 331
+    },
+    {
+      "tokenId": 264,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 19.85869557,
+      "ordinaryRank": 409
+    },
+    {
+      "tokenId": 265,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 29.15195951,
+      "ordinaryRank": 158
+    },
+    {
+      "tokenId": 266,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 29.97561795,
+      "ordinaryRank": 146
+    },
+    {
+      "tokenId": 267,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 20.72316311,
+      "ordinaryRank": 380
+    },
+    {
+      "tokenId": 268,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 50.47032469,
+      "ordinaryRank": 37
+    },
+    {
+      "tokenId": 269,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 28.36736503,
+      "ordinaryRank": 171
+    },
+    {
+      "tokenId": 270,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 21.9541756,
+      "ordinaryRank": 339
+    },
+    {
+      "tokenId": 271,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 21.06808576,
+      "ordinaryRank": 372
+    },
+    {
+      "tokenId": 272,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 41.09415781,
+      "ordinaryRank": 62
+    },
+    {
+      "tokenId": 273,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 22.79034448,
+      "ordinaryRank": 311
+    },
+    {
+      "tokenId": 274,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 25.5156454,
+      "ordinaryRank": 235
+    },
+    {
+      "tokenId": 275,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 28.20177722,
+      "ordinaryRank": 174
+    },
+    {
+      "tokenId": 276,
+      "tier": "Legendary",
+      "dailyFrogs": 300,
+      "traitRarityScore": 76.54474208,
+      "ordinaryRank": 12
+    },
+    {
+      "tokenId": 277,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 22.4416023,
+      "ordinaryRank": 319
+    },
+    {
+      "tokenId": 278,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 23.73631541,
+      "ordinaryRank": 281
+    },
+    {
+      "tokenId": 279,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 20.59354933,
+      "ordinaryRank": 386
+    },
+    {
+      "tokenId": 280,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 31.50556072,
+      "ordinaryRank": 127
+    },
+    {
+      "tokenId": 281,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 31.59512708,
+      "ordinaryRank": 126
+    },
+    {
+      "tokenId": 282,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 19.39371233,
+      "ordinaryRank": 425
+    },
+    {
+      "tokenId": 283,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 31.06624507,
+      "ordinaryRank": 132
+    },
+    {
+      "tokenId": 284,
+      "tier": "Legendary",
+      "dailyFrogs": 300,
+      "traitRarityScore": 82.00022866,
+      "ordinaryRank": 5
+    },
+    {
+      "tokenId": 285,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 26.02319563,
+      "ordinaryRank": 219
+    },
+    {
+      "tokenId": 286,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 20.70575417,
+      "ordinaryRank": 382
+    },
+    {
+      "tokenId": 287,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 25.76817293,
+      "ordinaryRank": 225
+    },
+    {
+      "tokenId": 288,
+      "tier": "Legendary",
+      "dailyFrogs": 300,
+      "traitRarityScore": 73.51319934,
+      "ordinaryRank": 16
+    },
+    {
+      "tokenId": 289,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 22.66336904,
+      "ordinaryRank": 316
+    },
+    {
+      "tokenId": 290,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 21.42705125,
+      "ordinaryRank": 355
+    },
+    {
+      "tokenId": 291,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 20.12195997,
+      "ordinaryRank": 403
+    },
+    {
+      "tokenId": 292,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 20.51418141,
+      "ordinaryRank": 389
+    },
+    {
+      "tokenId": 293,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 21.72088016,
+      "ordinaryRank": 347
+    },
+    {
+      "tokenId": 294,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 20.80632942,
+      "ordinaryRank": 375
+    },
+    {
+      "tokenId": 295,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 21.6289516,
+      "ordinaryRank": 351
+    },
+    {
+      "tokenId": 296,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 23.65496887,
+      "ordinaryRank": 283
+    },
+    {
+      "tokenId": 297,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 23.31091327,
+      "ordinaryRank": 293
+    },
+    {
+      "tokenId": 298,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 16.68029362,
+      "ordinaryRank": 478
+    },
+    {
+      "tokenId": 299,
+      "tier": "Legendary",
+      "dailyFrogs": 300,
+      "traitRarityScore": 61.88131856,
+      "ordinaryRank": 24
+    },
+    {
+      "tokenId": 300,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 20.91885144,
+      "ordinaryRank": 373
+    },
+    {
+      "tokenId": 301,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 56.77152415,
+      "ordinaryRank": 29
+    },
+    {
+      "tokenId": 302,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 22.80988827,
+      "ordinaryRank": 310
+    },
+    {
+      "tokenId": 303,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 45.79402479,
+      "ordinaryRank": 45
+    },
+    {
+      "tokenId": 304,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 34.39548266,
+      "ordinaryRank": 94
+    },
+    {
+      "tokenId": 305,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 21.79395829,
+      "ordinaryRank": 346
+    },
+    {
+      "tokenId": 306,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 34.97730582,
+      "ordinaryRank": 91
+    },
+    {
+      "tokenId": 307,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 31.17835872,
+      "ordinaryRank": 130
+    },
+    {
+      "tokenId": 308,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 26.06478108,
+      "ordinaryRank": 216
+    },
+    {
+      "tokenId": 309,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 20.53158973,
+      "ordinaryRank": 387
+    },
+    {
+      "tokenId": 310,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 25.76669122,
+      "ordinaryRank": 226
+    },
+    {
+      "tokenId": 311,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 43.44815018,
+      "ordinaryRank": 54
+    },
+    {
+      "tokenId": 312,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 26.43161403,
+      "ordinaryRank": 208
+    },
+    {
+      "tokenId": 313,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 18.10436921,
+      "ordinaryRank": 452
+    },
+    {
+      "tokenId": 314,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 28.92394068,
+      "ordinaryRank": 166
+    },
+    {
+      "tokenId": 315,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 40.70255782,
+      "ordinaryRank": 64
+    },
+    {
+      "tokenId": 316,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 30.95274008,
+      "ordinaryRank": 133
+    },
+    {
+      "tokenId": 317,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 19.89731122,
+      "ordinaryRank": 408
+    },
+    {
+      "tokenId": 318,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 27.23790412,
+      "ordinaryRank": 195
+    },
+    {
+      "tokenId": 319,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 25.53188034,
+      "ordinaryRank": 233
+    },
+    {
+      "tokenId": 320,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 23.89882305,
+      "ordinaryRank": 274
+    },
+    {
+      "tokenId": 321,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 21.48160412,
+      "ordinaryRank": 354
+    },
+    {
+      "tokenId": 322,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 19.2811903,
+      "ordinaryRank": 428
+    },
+    {
+      "tokenId": 323,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 29.69123173,
+      "ordinaryRank": 150
+    },
+    {
+      "tokenId": 324,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 21.64941706,
+      "ordinaryRank": 350
+    },
+    {
+      "tokenId": 325,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 45.52597963,
+      "ordinaryRank": 46
+    },
+    {
+      "tokenId": 326,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 22.16051202,
+      "ordinaryRank": 330
+    },
+    {
+      "tokenId": 327,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 23.00146165,
+      "ordinaryRank": 303
+    },
+    {
+      "tokenId": 328,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 30.83808448,
+      "ordinaryRank": 137
+    },
+    {
+      "tokenId": 329,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 24.6225601,
+      "ordinaryRank": 252
+    },
+    {
+      "tokenId": 330,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 24.8231205,
+      "ordinaryRank": 250
+    },
+    {
+      "tokenId": 331,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 29.38131701,
+      "ordinaryRank": 157
+    },
+    {
+      "tokenId": 332,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 43.20806246,
+      "ordinaryRank": 56
+    },
+    {
+      "tokenId": 333,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 27.45389484,
+      "ordinaryRank": 187
+    },
+    {
+      "tokenId": 334,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 44.01317853,
+      "ordinaryRank": 52
+    },
+    {
+      "tokenId": 335,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 23.56421432,
+      "ordinaryRank": 288
+    },
+    {
+      "tokenId": 336,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 35.91838237,
+      "ordinaryRank": 82
+    },
+    {
+      "tokenId": 337,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 30.60352725,
+      "ordinaryRank": 140
+    },
+    {
+      "tokenId": 338,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 24.56951961,
+      "ordinaryRank": 253
+    },
+    {
+      "tokenId": 339,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 30.27124491,
+      "ordinaryRank": 143
+    },
+    {
+      "tokenId": 340,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 28.98590028,
+      "ordinaryRank": 164
+    },
+    {
+      "tokenId": 341,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 33.80993767,
+      "ordinaryRank": 102
+    },
+    {
+      "tokenId": 342,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 23.62815192,
+      "ordinaryRank": 286
+    },
+    {
+      "tokenId": 343,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 43.10551786,
+      "ordinaryRank": 57
+    },
+    {
+      "tokenId": 344,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 21.2384652,
+      "ordinaryRank": 362
+    },
+    {
+      "tokenId": 345,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 20.20438773,
+      "ordinaryRank": 401
+    },
+    {
+      "tokenId": 346,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 19.20370907,
+      "ordinaryRank": 432
+    },
+    {
+      "tokenId": 347,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 22.37775249,
+      "ordinaryRank": 323
+    },
+    {
+      "tokenId": 348,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 25.63898393,
+      "ordinaryRank": 229
+    },
+    {
+      "tokenId": 349,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 36.65806577,
+      "ordinaryRank": 77
+    },
+    {
+      "tokenId": 350,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 29.12411093,
+      "ordinaryRank": 160
+    },
+    {
+      "tokenId": 351,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 27.20109856,
+      "ordinaryRank": 196
+    },
+    {
+      "tokenId": 352,
+      "tier": "Legendary",
+      "dailyFrogs": 300,
+      "traitRarityScore": 77.58451358,
+      "ordinaryRank": 10
+    },
+    {
+      "tokenId": 353,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 19.12029919,
+      "ordinaryRank": 433
+    },
+    {
+      "tokenId": 354,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 29.12851945,
+      "ordinaryRank": 159
+    },
+    {
+      "tokenId": 355,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 32.9519404,
+      "ordinaryRank": 108
+    },
+    {
+      "tokenId": 356,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 22.02007815,
+      "ordinaryRank": 337
+    },
+    {
+      "tokenId": 357,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 44.19348527,
+      "ordinaryRank": 51
+    },
+    {
+      "tokenId": 358,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 35.37718292,
+      "ordinaryRank": 87
+    },
+    {
+      "tokenId": 359,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 21.90212116,
+      "ordinaryRank": 341
+    },
+    {
+      "tokenId": 360,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 26.73396526,
+      "ordinaryRank": 202
+    },
+    {
+      "tokenId": 361,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 52.6504503,
+      "ordinaryRank": 35
+    },
+    {
+      "tokenId": 362,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 23.13511227,
+      "ordinaryRank": 299
+    },
+    {
+      "tokenId": 363,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 31.28612139,
+      "ordinaryRank": 129
+    },
+    {
+      "tokenId": 364,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 41.64889861,
+      "ordinaryRank": 61
+    },
+    {
+      "tokenId": 365,
+      "tier": "Legendary",
+      "dailyFrogs": 300,
+      "traitRarityScore": 77.40162138,
+      "ordinaryRank": 11
+    },
+    {
+      "tokenId": 366,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 23.19588796,
+      "ordinaryRank": 296
+    },
+    {
+      "tokenId": 367,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 32.82190859,
+      "ordinaryRank": 109
+    },
+    {
+      "tokenId": 368,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 20.3698827,
+      "ordinaryRank": 395
+    },
+    {
+      "tokenId": 369,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 20.79988575,
+      "ordinaryRank": 376
+    },
+    {
+      "tokenId": 370,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 29.67914251,
+      "ordinaryRank": 152
+    },
+    {
+      "tokenId": 371,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 44.54618396,
+      "ordinaryRank": 48
+    },
+    {
+      "tokenId": 372,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 33.33430635,
+      "ordinaryRank": 106
+    },
+    {
+      "tokenId": 373,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 19.72199618,
+      "ordinaryRank": 413
+    },
+    {
+      "tokenId": 374,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 27.41664669,
+      "ordinaryRank": 193
+    },
+    {
+      "tokenId": 375,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 24.13933905,
+      "ordinaryRank": 269
+    },
+    {
+      "tokenId": 376,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 20.88567075,
+      "ordinaryRank": 374
+    },
+    {
+      "tokenId": 377,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 21.68613044,
+      "ordinaryRank": 349
+    },
+    {
+      "tokenId": 378,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 26.35165943,
+      "ordinaryRank": 209
+    },
+    {
+      "tokenId": 379,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 17.81470102,
+      "ordinaryRank": 457
+    },
+    {
+      "tokenId": 380,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 28.76576578,
+      "ordinaryRank": 167
+    },
+    {
+      "tokenId": 381,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 17.12109887,
+      "ordinaryRank": 470
+    },
+    {
+      "tokenId": 382,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 31.70006086,
+      "ordinaryRank": 124
+    },
+    {
+      "tokenId": 383,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 27.91968268,
+      "ordinaryRank": 183
+    },
+    {
+      "tokenId": 384,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 23.32107541,
+      "ordinaryRank": 292
+    },
+    {
+      "tokenId": 385,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 28.03859291,
+      "ordinaryRank": 179
+    },
+    {
+      "tokenId": 386,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 33.96581673,
+      "ordinaryRank": 99
+    },
+    {
+      "tokenId": 387,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 27.12262428,
+      "ordinaryRank": 197
+    },
+    {
+      "tokenId": 388,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 32.01396446,
+      "ordinaryRank": 120
+    },
+    {
+      "tokenId": 389,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 19.71332609,
+      "ordinaryRank": 414
+    },
+    {
+      "tokenId": 390,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 58.92654163,
+      "ordinaryRank": 26
+    },
+    {
+      "tokenId": 391,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 36.01193666,
+      "ordinaryRank": 81
+    },
+    {
+      "tokenId": 392,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 26.04935162,
+      "ordinaryRank": 218
+    },
+    {
+      "tokenId": 393,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 43.98047723,
+      "ordinaryRank": 53
+    },
+    {
+      "tokenId": 394,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 19.01783811,
+      "ordinaryRank": 436
+    },
+    {
+      "tokenId": 395,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 34.22915678,
+      "ordinaryRank": 98
+    },
+    {
+      "tokenId": 396,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 18.4341317,
+      "ordinaryRank": 445
+    },
+    {
+      "tokenId": 397,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 21.39291265,
+      "ordinaryRank": 359
+    },
+    {
+      "tokenId": 398,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 21.892216,
+      "ordinaryRank": 342
+    },
+    {
+      "tokenId": 399,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 28.00967359,
+      "ordinaryRank": 181
+    },
+    {
+      "tokenId": 400,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 21.70643283,
+      "ordinaryRank": 348
+    },
+    {
+      "tokenId": 401,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 23.22512827,
+      "ordinaryRank": 295
+    },
+    {
+      "tokenId": 402,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 19.57959735,
+      "ordinaryRank": 418
+    },
+    {
+      "tokenId": 403,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 53.07720658,
+      "ordinaryRank": 31
+    },
+    {
+      "tokenId": 404,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 48.25368055,
+      "ordinaryRank": 40
+    },
+    {
+      "tokenId": 405,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 20.76210414,
+      "ordinaryRank": 377
+    },
+    {
+      "tokenId": 406,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 31.77266855,
+      "ordinaryRank": 122
+    },
+    {
+      "tokenId": 407,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 22.3776647,
+      "ordinaryRank": 324
+    },
+    {
+      "tokenId": 408,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 20.47505886,
+      "ordinaryRank": 391
+    },
+    {
+      "tokenId": 409,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 19.23926488,
+      "ordinaryRank": 431
+    },
+    {
+      "tokenId": 410,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 26.7688112,
+      "ordinaryRank": 200
+    },
+    {
+      "tokenId": 411,
+      "tier": "Legendary",
+      "dailyFrogs": 300,
+      "traitRarityScore": 81.14876385,
+      "ordinaryRank": 6
+    },
+    {
+      "tokenId": 412,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 21.22592795,
+      "ordinaryRank": 363
+    },
+    {
+      "tokenId": 413,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 19.90489946,
+      "ordinaryRank": 407
+    },
+    {
+      "tokenId": 414,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 49.51833231,
+      "ordinaryRank": 39
+    },
+    {
+      "tokenId": 415,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 24.24312222,
+      "ordinaryRank": 263
+    },
+    {
+      "tokenId": 416,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 24.24510171,
+      "ordinaryRank": 262
+    },
+    {
+      "tokenId": 417,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 16.86270863,
+      "ordinaryRank": 474
+    },
+    {
+      "tokenId": 418,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 35.83613566,
+      "ordinaryRank": 83
+    },
+    {
+      "tokenId": 419,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 22.40686463,
+      "ordinaryRank": 322
+    },
+    {
+      "tokenId": 420,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 26.12389533,
+      "ordinaryRank": 214
+    },
+    {
+      "tokenId": 421,
+      "tier": "Legendary",
+      "dailyFrogs": 300,
+      "traitRarityScore": 72.24351455,
+      "ordinaryRank": 17
+    },
+    {
+      "tokenId": 422,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 19.45873177,
+      "ordinaryRank": 424
+    },
+    {
+      "tokenId": 423,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 38.68245664,
+      "ordinaryRank": 72
+    },
+    {
+      "tokenId": 424,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 19.05636159,
+      "ordinaryRank": 435
+    },
+    {
+      "tokenId": 425,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 25.30563168,
+      "ordinaryRank": 241
+    },
+    {
+      "tokenId": 426,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 26.06193573,
+      "ordinaryRank": 217
+    },
+    {
+      "tokenId": 427,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 19.27252084,
+      "ordinaryRank": 429
+    },
+    {
+      "tokenId": 428,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 28.01047178,
+      "ordinaryRank": 180
+    },
+    {
+      "tokenId": 429,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 21.88634941,
+      "ordinaryRank": 343
+    },
+    {
+      "tokenId": 430,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 21.39448277,
+      "ordinaryRank": 357
+    },
+    {
+      "tokenId": 431,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 18.2253129,
+      "ordinaryRank": 449
+    },
+    {
+      "tokenId": 432,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 22.34292704,
+      "ordinaryRank": 325
+    },
+    {
+      "tokenId": 433,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 30.38199567,
+      "ordinaryRank": 142
+    },
+    {
+      "tokenId": 434,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 25.31418214,
+      "ordinaryRank": 238
+    },
+    {
+      "tokenId": 435,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 34.24598418,
+      "ordinaryRank": 97
+    },
+    {
+      "tokenId": 436,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 28.00729847,
+      "ordinaryRank": 182
+    },
+    {
+      "tokenId": 437,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 37.27054301,
+      "ordinaryRank": 76
+    },
+    {
+      "tokenId": 438,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 25.80142889,
+      "ordinaryRank": 224
+    },
+    {
+      "tokenId": 439,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 25.75485922,
+      "ordinaryRank": 227
+    },
+    {
+      "tokenId": 440,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 18.1683068,
+      "ordinaryRank": 450
+    },
+    {
+      "tokenId": 441,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 58.25758007,
+      "ordinaryRank": 28
+    },
+    {
+      "tokenId": 442,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 40.00895567,
+      "ordinaryRank": 68
+    },
+    {
+      "tokenId": 443,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 22.85161511,
+      "ordinaryRank": 309
+    },
+    {
+      "tokenId": 444,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 20.29631629,
+      "ordinaryRank": 397
+    },
+    {
+      "tokenId": 445,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 22.08203774,
+      "ordinaryRank": 336
+    },
+    {
+      "tokenId": 446,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 33.6323962,
+      "ordinaryRank": 104
+    },
+    {
+      "tokenId": 447,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 19.63148632,
+      "ordinaryRank": 417
+    },
+    {
+      "tokenId": 448,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 26.63508246,
+      "ordinaryRank": 205
+    },
+    {
+      "tokenId": 449,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 27.65716269,
+      "ordinaryRank": 185
+    },
+    {
+      "tokenId": 450,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 18.80068543,
+      "ordinaryRank": 437
+    },
+    {
+      "tokenId": 451,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 19.29859925,
+      "ordinaryRank": 427
+    },
+    {
+      "tokenId": 452,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 34.38715383,
+      "ordinaryRank": 95
+    },
+    {
+      "tokenId": 453,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 25.93490398,
+      "ordinaryRank": 222
+    },
+    {
+      "tokenId": 454,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 24.16464795,
+      "ordinaryRank": 265
+    },
+    {
+      "tokenId": 455,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 20.21197598,
+      "ordinaryRank": 400
+    },
+    {
+      "tokenId": 456,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 46.06308743,
+      "ordinaryRank": 43
+    },
+    {
+      "tokenId": 457,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 36.61667384,
+      "ordinaryRank": 78
+    },
+    {
+      "tokenId": 458,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 21.18814635,
+      "ordinaryRank": 365
+    },
+    {
+      "tokenId": 459,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 22.91953348,
+      "ordinaryRank": 305
+    },
+    {
+      "tokenId": 460,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 52.87262782,
+      "ordinaryRank": 33
+    },
+    {
+      "tokenId": 461,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 42.89135304,
+      "ordinaryRank": 58
+    },
+    {
+      "tokenId": 462,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 27.44556601,
+      "ordinaryRank": 190
+    },
+    {
+      "tokenId": 463,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 58.73347853,
+      "ordinaryRank": 27
+    },
+    {
+      "tokenId": 464,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 18.25171669,
+      "ordinaryRank": 448
+    },
+    {
+      "tokenId": 465,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 27.7415223,
+      "ordinaryRank": 184
+    },
+    {
+      "tokenId": 466,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 32.41237148,
+      "ordinaryRank": 115
+    },
+    {
+      "tokenId": 467,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 26.70517031,
+      "ordinaryRank": 203
+    },
+    {
+      "tokenId": 468,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 32.73281349,
+      "ordinaryRank": 111
+    },
+    {
+      "tokenId": 469,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 22.1606042,
+      "ordinaryRank": 329
+    },
+    {
+      "tokenId": 470,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 39.72692543,
+      "ordinaryRank": 69
+    },
+    {
+      "tokenId": 471,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 44.38282642,
+      "ordinaryRank": 50
+    },
+    {
+      "tokenId": 472,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 26.19398317,
+      "ordinaryRank": 212
+    },
+    {
+      "tokenId": 473,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 23.32668503,
+      "ordinaryRank": 291
+    },
+    {
+      "tokenId": 474,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 55.22654583,
+      "ordinaryRank": 30
+    },
+    {
+      "tokenId": 475,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 25.24367209,
+      "ordinaryRank": 243
+    },
+    {
+      "tokenId": 476,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 22.68470082,
+      "ordinaryRank": 314
+    },
+    {
+      "tokenId": 477,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 26.65293591,
+      "ordinaryRank": 204
+    },
+    {
+      "tokenId": 478,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 23.74233686,
+      "ordinaryRank": 280
+    },
+    {
+      "tokenId": 479,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 25.44825085,
+      "ordinaryRank": 236
+    },
+    {
+      "tokenId": 480,
+      "tier": "Legendary",
+      "dailyFrogs": 300,
+      "traitRarityScore": 83.79367945,
+      "ordinaryRank": 1
+    },
+    {
+      "tokenId": 481,
+      "tier": "Legendary",
+      "dailyFrogs": 300,
+      "traitRarityScore": 68.55737369,
+      "ordinaryRank": 19
+    },
+    {
+      "tokenId": 482,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 52.89556722,
+      "ordinaryRank": 32
+    },
+    {
+      "tokenId": 483,
+      "tier": "1/1",
+      "dailyFrogs": 1000,
+      "traitRarityScore": 1561.89903846,
+      "ordinaryRank": null
+    },
+    {
+      "tokenId": 484,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 28.1628216,
+      "ordinaryRank": 176
+    },
+    {
+      "tokenId": 485,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 32.18952996,
+      "ordinaryRank": 116
+    },
+    {
+      "tokenId": 486,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 33.58669414,
+      "ordinaryRank": 105
+    },
+    {
+      "tokenId": 487,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 29.86948306,
+      "ordinaryRank": 147
+    },
+    {
+      "tokenId": 488,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 32.56639762,
+      "ordinaryRank": 113
+    },
+    {
+      "tokenId": 489,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 24.56843778,
+      "ordinaryRank": 254
+    },
+    {
+      "tokenId": 490,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 31.98814031,
+      "ordinaryRank": 121
+    },
+    {
+      "tokenId": 491,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 25.30773848,
+      "ordinaryRank": 240
+    },
+    {
+      "tokenId": 492,
+      "tier": "Common",
+      "dailyFrogs": 100,
+      "traitRarityScore": 22.62558743,
+      "ordinaryRank": 317
+    },
+    {
+      "tokenId": 493,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 28.10580584,
+      "ordinaryRank": 177
+    },
+    {
+      "tokenId": 494,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 30.50703906,
+      "ordinaryRank": 141
+    },
+    {
+      "tokenId": 495,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 35.14262569,
+      "ordinaryRank": 89
+    },
+    {
+      "tokenId": 496,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 29.5063604,
+      "ordinaryRank": 155
+    },
+    {
+      "tokenId": 497,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 25.84691596,
+      "ordinaryRank": 223
+    },
+    {
+      "tokenId": 498,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 25.57019827,
+      "ordinaryRank": 232
+    },
+    {
+      "tokenId": 499,
+      "tier": "Rare",
+      "dailyFrogs": 150,
+      "traitRarityScore": 30.86933019,
+      "ordinaryRank": 135
+    },
+    {
+      "tokenId": 500,
+      "tier": "Epic",
+      "dailyFrogs": 200,
+      "traitRarityScore": 36.23042083,
+      "ordinaryRank": 80
+    }
+  ]
+}
