@@ -1,0 +1,33 @@
+name: Sync full staking site
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out target repository
+        uses: actions/checkout@v4
+
+      - name: Download verified staking source
+        run: git clone --depth 1 https://github.com/Nikotine05/ink-frogs-staking-vercel.git "$RUNNER_TEMP/staking-source"
+
+      - name: Mirror production files safely
+        run: |
+          rsync -a --delete             --exclude='.git/'             --exclude='.github/'             --exclude='.vercel/'             --exclude='social/'             "$RUNNER_TEMP/staking-source/" ./
+
+      - name: Commit synchronized site
+        run: |
+          git config user.name "ink-frogs-deploy-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Site already synchronized."
+            exit 0
+          fi
+          git commit -m "Sync complete staking website"
+          git push
